@@ -54,6 +54,9 @@ jobs:
       run: |
         php artisan storage:link
 
+    - name: 🚧 Run migrations
+      run: php artisan migrate --seed
+
     # - uses: shivammathur/setup-php@v2
     #   with:
     #    php-version: '8.1'
@@ -68,6 +71,3 @@ jobs:
 
     - name: 🚧 Build assets with Vite
       run: npm run build
-
-    - name: 🚧 Run migrations
-      run: php artisan migrate --seed
