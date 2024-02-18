@@ -22,13 +22,6 @@ jobs:
         password: Cashmate@123
         server-dir: /
 
-    # - name: 🛠 Install Composer and npm
-    #   run: |
-    #     # Install Composer
-    #     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-    #     # Install npm
-    #     sudo apt-get install -y npm
-
     - name: 📝 Create .env file
       run: |
         echo "DB_CONNECTION=mysql" >> .env
@@ -54,17 +47,18 @@ jobs:
       run: |
         php artisan storage:link
 
-    # - uses: shivammathur/setup-php@v2
-    #   with:
-    #    php-version: '8.1'
-
-    # - name: 🚧 Install Node.js and npm
-    #   uses: actions/setup-node@v3
-    #   with:
-    #     node-version: 14
+    # - name: 🏪 Run Migrations
+    #   run: |
+    #     php artisan migrate
+    #     php artisan db:seed
 
     - name: 🚧 Install Vite dependencies
       run: npm install
 
+    - name: 🔐 Storage Permissions
+      run: chmod -R u=rwX,go=rX ./
+
     - name: 🚧 Build assets with Vite
       run: npm run build
+
+   
