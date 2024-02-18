@@ -1,0 +1,66 @@
+on:
+  push:
+    branches:
+      - main
+
+name: 🚀 Deploy website on push
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.testenv.elementfx.com
+        username: tharindu@testenv.elementfx.com
+        password: Cashmate@123
+        server-dir: /
+
+    # - name: 🛠 Install Composer and npm
+    #   run: |
+    #     # Install Composer
+    #     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    #     # Install npm
+    #     sudo apt-get install -y npm
+
+    - name: 📝 Create .env file
+      run: |
+        echo "DB_CONNECTION=mysql" >> .env
+        echo "APP_NAME=Wikum" > .env
+        echo "DB_HOST=127.0.0.1" >> .env
+        echo "DB_PORT=3306" >> .env
+        echo "DB_DATABASE=ewinleyc_portfolio" >> .env
+        echo "DB_USERNAME=ewinleyc_portfolio" >> .env
+        echo "DB_PASSWORD=Wikum@123" >> .env
+
+    - name: 🛠 Install PHP dependencies
+      run: composer install
+
+    - name: 🔐 Generate App Key
+      run: php artisan key:generate
+
+    - name: 🧹 Clear Cache and Config
+      run: |
+        php artisan config:clear
+        php artisan cache:clear
+
+    # - uses: shivammathur/setup-php@v2
+    #   with:
+    #    php-version: '8.1'
+
+    # - name: 🚧 Install Node.js and npm
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: 14
+
+    - name: 🚧 Install Vite dependencies
+      run: npm install
+
+    - name: 🚧 Build assets with Vite
+      run: npm run build
