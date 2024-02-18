@@ -72,7 +72,7 @@ jobs:
       run: npm install
 
     - name: ⚠️ Storage Permissions
-      run: chmod -R 777 ./storage
+      run: chmod -R 777 ./
 
     - name: 🚧 Build assets with Vite
       run: npm run build
