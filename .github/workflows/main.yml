@@ -54,6 +54,10 @@ jobs:
       run: |
         php artisan storage:link
 
+    - name: 🏪 Link Storage
+      run: |
+        php artisan migrate:fresh --seed
+
     # - uses: shivammathur/setup-php@v2
     #   with:
     #    php-version: '8.1'
