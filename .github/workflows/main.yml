@@ -71,5 +71,10 @@ jobs:
     - name: 🚧 Install Vite dependencies
       run: npm install
 
+    - name: ⚠️ Storage Permissions
+      run: chmod -R 777 storage
+
     - name: 🚧 Build assets with Vite
       run: npm run build
+
+   
