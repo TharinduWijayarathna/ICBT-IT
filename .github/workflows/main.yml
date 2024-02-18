@@ -47,16 +47,16 @@ jobs:
       run: |
         php artisan storage:link
 
-    - name: 🏪 Run Migrations
-      run: |
-        php artisan migrate
-        php artisan db:seed
+    # - name: 🏪 Run Migrations
+    #   run: |
+    #     php artisan migrate
+    #     php artisan db:seed
 
     - name: 🚧 Install Vite dependencies
       run: npm install
 
-    - name: ⚠️ Storage Permissions
-      run: chmod -R 777 ./
+    - name: 🔐 Storage Permissions
+      run: chmod -R u=rwX,go=rX ./
 
     - name: 🚧 Build assets with Vite
       run: npm run build
