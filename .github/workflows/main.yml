@@ -35,9 +35,9 @@ jobs:
         echo "APP_NAME=Wikum" > .env
         echo "DB_HOST=127.0.0.1" >> .env
         echo "DB_PORT=3306" >> .env
-        echo "DB_DATABASE=ewinleyc_portfolio" >> .env
-        echo "DB_USERNAME=ewinleyc_portfolio" >> .env
-        echo "DB_PASSWORD=Wikum@123" >> .env
+        echo "DB_DATABASE=cvtrbbjr_cashmate" >> .env
+        echo "DB_USERNAME=cvtrbbjr_cashmate" >> .env
+        echo "DB_PASSWORD=Cashmate@123" >> .env
 
     - name: 🛠 Install PHP dependencies
       run: composer install
@@ -49,6 +49,10 @@ jobs:
       run: |
         php artisan config:clear
         php artisan cache:clear
+
+    - name: 🏪 Link Storage
+      run: |
+        php artisan storage:link
 
     # - uses: shivammathur/setup-php@v2
     #   with:
