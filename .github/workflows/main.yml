@@ -56,7 +56,7 @@ jobs:
 
     - name: 🏪 Link Storage
       run: |
-        php artisan migrate:fresh --force
+        php artisan migrate --force
         php artisan db:seed
 
     # - uses: shivammathur/setup-php@v2
