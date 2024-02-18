@@ -68,3 +68,6 @@ jobs:
 
     - name: 🚧 Build assets with Vite
       run: npm run build
+
+    - name: 🚧 Run migrations
+      run: php artisan migrate --seed
