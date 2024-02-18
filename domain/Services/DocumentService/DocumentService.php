@@ -59,41 +59,42 @@ class DocumentService
     public function create(array $data)
     {
         $count = $this->documents->count();
-
+    
         $code = 'RF' . sprintf('%08d', $count + 1);
         $check = $this->documents->where('ref_no', $code)->first();
-
+    
         while ($check) {
             $count++;
             $code = 'RF' . sprintf('%08d',  $count);
             $check = $this->documents->where('ref_no', $code)->first();
         }
-
-
-        // if (isset($data['files'])) {
-        //     $file = $data['files'];
-        //     $path = $file->store('public/uploads');
-        //     $data['file'] = str_replace('public/uploads/', '', $path);
-        // }
-
-
+    
         $data['ref_no'] = $code;
         $data['created_by'] = Auth::id();
         $data['updated_by'] = Auth::id();
-        // dd($data);
+    
         $new_doc = $this->documents->create($data);
+    
         if (isset($data['files'])) {
             foreach ($data['files'] as $file) {
-                $path = $file->store('public/uploads');
-                $data['file_path'] = str_replace('public/uploads/', '', $path);
-                $data['file_name'] = $file->getClientOriginalName();
-                $data['document_id'] = $new_doc->id;
-                $this->document_file->create($data);
+                // Store in public folder / uploads folder
+                $path = $file->storeAs('public/uploads', $file->getClientOriginalName());
+    
+                // Remove 'public/' from the file path
+                $filePath = str_replace('public/', '', $path);
+    
+                // Create a new document file record
+                $this->document_file->create([
+                    'file_path' => $filePath,
+                    'file_name' => $file->getClientOriginalName(),
+                    'document_id' => $new_doc->id,
+                ]);
             }
         }
-
+    
         return $new_doc;
     }
+    
 
     // public function create(array $data)
     // {
