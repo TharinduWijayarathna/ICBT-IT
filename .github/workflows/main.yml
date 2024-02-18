@@ -54,10 +54,10 @@ jobs:
       run: |
         php artisan storage:link
 
-    - name: 🏪 Link Storage
-      run: |
-        php artisan migrate --force
-        php artisan db:seed
+    # - name: 🏪 Link Storage
+    #   run: |
+    #     php artisan migrate --force
+    #     php artisan db:seed
 
     # - uses: shivammathur/setup-php@v2
     #   with:
