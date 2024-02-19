@@ -11,69 +11,64 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2.3.2
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2.3.2
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ftp.mypos.elementfx.com
-        username: tharindu@mypos.elementfx.com
-        password: Wikum@123
-        server-dir: /
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ftp.mypos.elementfx.com
+          username: tharindu@mypos.elementfx.com
+          password: Wikum@123
+          server-dir: /
 
-    - name: 📝 Create .env file
-      run: |
-        echo "DB_CONNECTION=mysql" >> .env
-        echo "APP_NAME=Wikum" > .env
-        echo "DB_HOST=127.0.0.1" >> .env
-        echo "DB_PORT=3306" >> .env
-        echo "DB_DATABASE=cvtrbbjr_pos" >> .env
-        echo "DB_USERNAME=cvtrbbjr_pos" >> .env
-        echo "DB_PASSWORD=mypos@123" >> .env
+      - name: 📝 Create .env file
+        run: |
+          echo "DB_CONNECTION=mysql" >> .env
+          echo "APP_NAME=Wikum" > .env
+          echo "DB_HOST=127.0.0.1" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "DB_DATABASE=cvtrbbjr_pos" >> .env
+          echo "DB_USERNAME=cvtrbbjr_pos" >> .env
+          echo "DB_PASSWORD=mypos@123" >> .env
 
-    # - name: 🛠 Remove existing vendor folder
-    #   run: rm -rf vendor
+      # - name: 🛠 Remove existing vendor folder
+      #   run: rm -rf vendor
 
-    - name: 🛠 Install PHP dependencies
-      run: composer install
+      - name: 🚧 Remove composer.lock
+        run: rm -rf composer.lock
 
-    - name: 🔐 Generate App Key
-      run: php artisan key:generate
+      - name: 🛠 Install PHP dependencies
+        run: composer install
 
-    - name: 🧹 Clear Cache and Config
-      run: |
-        php artisan config:clear
-        php artisan cache:clear
+      - name: 🔐 Generate App Key
+        run: php artisan key:generate
 
-    - name: 🏪 Link Storage
-      run: |
-        php artisan storage:link
+      - name: 🧹 Clear Cache and Config
+        run: |
+          php artisan config:clear
+          php artisan cache:clear
 
-    # - name: 🏪 Run Migrations
-    #   run: |
-    #     php artisan migrate
-    #     php artisan db:seed
+      - name: 🏪 Link Storage
+        run: |
+          php artisan storage:link
 
-    # - name: 🏗 Remove existing Node Modules Folder
-    #   run: rm -rf node_modules
+      # - name: 🏪 Run Migrations
+      #   run: |
+      #     php artisan migrate
+      #     php artisan db:seed
 
-    - name: 🚧 Install Node 20 lts
-      run: |
-        curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-        sudo apt-get install -y nodejs
+      # - name: 🏗 Remove existing Node Modules Folder
+      #   run: rm -rf node_modules
 
-    - name: 🚧 Install inertia js 
-      run: composer require inertiajs/inertia-laravel
+      - name: 🚧 Remove package-lock.json
+        run: rm -rf package-lock.json
 
+      - name: 🚧 Install Vite dependencies
+        run: npm install
 
-    - name: 🚧 Install Vite dependencies
-      run: npm install
+      - name: 🔐 Storage Permissions
+        run: chmod -R u=rwX,go=rX ./
 
-    - name: 🔐 Storage Permissions
-      run: chmod -R u=rwX,go=rX ./
-
-    - name: 🚧 Build assets with Vite
-      run: npm run build
-
-   
+      - name: 🚧 Build assets with Vite
+        run: npm run build
