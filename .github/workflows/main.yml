@@ -73,4 +73,4 @@ jobs:
         run: chmod -R u=rwX,go=rX ./
 
       - name: 🚧 Build assets with Vite
-        run: npm run production
+        run: npm run dev
