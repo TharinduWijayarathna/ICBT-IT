@@ -24,13 +24,13 @@ jobs:
 
       - name: 📝 Create .env file
           run: |
-            echo "DB_CONNECTION=mysql" >> .env
-            echo "APP_NAME=Wikum" >> .env
-            echo "DB_HOST=127.0.0.1" >> .env
-            echo "DB_PORT=3306" >> .env
-            echo "DB_DATABASE=cvtrbbjr_pos" >> .env
-            echo "DB_USERNAME=cvtrbbjr_pos" >> .env
-            echo "DB_PASSWORD=mypos@123" >> .env
+             echo "DB_CONNECTION=mysql" >> .env
+             echo "APP_NAME=Wikum" >> .env
+             echo "DB_HOST=127.0.0.1" >> .env
+             echo "DB_PORT=3306" >> .env
+             echo "DB_DATABASE=cvtrbbjr_pos" >> .env
+             echo "DB_USERNAME=cvtrbbjr_pos" >> .env
+             echo "DB_PASSWORD=mypos@123" >> .env
 
       - name: 🛠 Verify .env file
           run: cat .env
