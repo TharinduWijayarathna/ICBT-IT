@@ -13,10 +13,25 @@
         <!-- Search -->
         <div class="navbar-nav align-items-center">
             <div class="nav-item navbar-search-wrapper mb-0">
-                <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
-                    <i class="ti ti-search ti-md me-2"></i>
-                    <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
-                </a>
+                
+                    @php
+                        $bandwidth = 0;
+                        $isLoading = true;
+
+                        if (isset($navigatorConnection) && $navigatorConnection) {
+                            $bandwidth = $navigatorConnection['downlink'];
+                            $connectionType = $navigatorConnection['effectiveType'];
+                            $isLoading = false;
+                        } else {
+                            $connectionType = 'Unknown';
+                            $bandwidth = 0;
+                            $isLoading = false;
+                        }
+                    @endphp
+
+
+                    <div id="networkStatus"></div>
+       
             </div>
         </div>
         <!-- /Search -->
@@ -25,7 +40,7 @@
             <!-- User -->
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
+                    <div class="avatar">
                         <img src="{{ asset('assets/admin/img/avatars/1.png') }}" alt class="h-auto rounded-circle">
                     </div>
                 </a>
@@ -34,7 +49,7 @@
                         <a class="dropdown-item" href="pages-account-settings-account.html">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
-                                    <div class="avatar avatar-online">
+                                    <div class="avatar ">
                                         <img src="{{ asset('assets/admin/img/avatars/1.png') }}" alt
                                             class="h-auto rounded-circle">
                                     </div>
@@ -82,3 +97,42 @@
 
 
 </nav>
+
+<!-- Add this script at the end of your HTML body or in the head section -->
+<script>
+    // Check if the NavigatorConnection API is supported
+    if ("connection" in navigator) {
+        // Fetch the connection information
+        var navigatorConnection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+        // Update the UI with the bandwidth information
+        function updateBandwidthUI() {
+            var bandwidth = navigatorConnection.downlink;
+            var connectionType = navigatorConnection.effectiveType;
+
+            // Modify the UI according to bandwidth and connection type
+            if (bandwidth == 0) {
+                document.getElementById("networkStatus").innerHTML =
+                    '<span style="padding-right: 10px;"><img src="{{ asset('assets/admin/img/connectivity/disconnected.png') }}" height="20" width="20" /></span>';
+            } else if (bandwidth > 0 && bandwidth <= 0.25) {
+                document.getElementById("networkStatus").innerHTML =
+                    '<span style="padding-right: 10px;"><img src="{{ asset('assets/admin/img/connectivity/connectivity_none.png') }}" height="20" width="20" /></span>';
+            } else if (bandwidth > 0.25 && bandwidth <= 2) {
+                document.getElementById("networkStatus").innerHTML =
+                    '<span style="padding-right: 10px;"><img src="{{ asset('assets/admin/img/connectivity/connectivity_slow.png') }}" height="20" width="20" /></span>';
+            } else {
+                document.getElementById("networkStatus").innerHTML =
+                    '<span style="padding-right: 10px;"><img src="{{ asset('assets/admin/img/connectivity/connectivity_connected.png') }}" height="20" width="20" /></span>';
+            }
+
+            // You can also use connectionType if needed
+            console.log("Connection Type:", connectionType);
+        }
+
+        // Call the function initially
+        updateBandwidthUI();
+
+        // Add an event listener for changes in the connection
+        navigatorConnection.addEventListener("change", updateBandwidthUI);
+    }
+</script>
