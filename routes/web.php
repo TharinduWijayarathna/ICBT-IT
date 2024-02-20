@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminArea\HomeController as AdminAreaHomeController;
+use App\Http\Controllers\AdminArea\MemberController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PublicArea\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,18 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class, 'index'])->name('home');
+Route::get('/dashboard',[AdminAreaHomeController::class, 'index'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::prefix('members')->group(function () {
+    Route::get('/',[MemberController::class, 'index'])->name('members');
+    Route::post('/store',[MemberController::class, 'store'])->name('members.store');
+    Route::get('/create',[MemberController::class, 'create'])->name('members.create');
 });
 
 require __DIR__.'/auth.php';
