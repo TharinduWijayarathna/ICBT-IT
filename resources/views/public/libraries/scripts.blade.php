@@ -8,3 +8,5 @@
 
 <!-- Customizer -->
 <script src="{{ asset('assets/web/js/customizer.min.js') }}"></script>
+
+@stack('scripts')

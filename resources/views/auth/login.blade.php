@@ -7,10 +7,31 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Loginnn</title>
+    <title>Login</title>
 
 
     @include('admin.libraries.styles')
+
+
+    <style>
+        .whole-login-content {
+            height: 100vh;
+        }
+
+        .main-login-image-div {
+            background-color: #f8f7fa;
+            color: white;
+        }
+
+        .main-login-image {
+            width: 100%;
+        }
+
+        .auth-cover-bg-color {
+            background-color: #f8f7fa;
+        }
+    </style>
+
 
 </head>
 
@@ -19,12 +40,12 @@
     <!-- Content -->
 
     <div class="authentication-wrapper authentication-cover authentication-bg">
-        <div class="authentication-inner col-12 row">
+        <div class="authentication-inner col-12 row whole-login-content">
             <!-- /Left Text -->
-            <div class="d-none d-lg-flex col-lg-7 p-5">
+            <div class="d-none d-lg-flex col-lg-7 p-5 main-login-image-div">
                 <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
-                    <img src="{{ asset('assets/admin/img/illustrations/auth-login-illustration-light.png') }}"
-                        alt="auth-login-cover" class="img-fluid auth-illustration my-5">
+                    <img src="{{ asset('assets/admin/img/illustrations/undraw_blogging_re_kl0d.svg') }}"
+                        alt="auth-login-cover" class=" auth-illustration my-5 main-login-image">
 
 
                 </div>
@@ -71,7 +92,7 @@
                         <div class="mb-3 form-password-toggle">
                             <div class="d-flex justify-content-between">
                                 <label class="form-label" for="password">Password</label>
-                            
+
                             </div>
                             <div class="input-group input-group-merge">
                                 <input type="password" class="form-control" id="password" type="password"

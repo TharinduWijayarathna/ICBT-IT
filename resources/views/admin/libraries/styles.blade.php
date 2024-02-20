@@ -36,3 +36,5 @@
 <script src="{{ asset('assets/admin/vendor/js/template-customizer.js') }}')}}"></script>
 
 <script src="{{ asset('assets/admin/js/config.js') }}"></script>
+
+@stack('styles')

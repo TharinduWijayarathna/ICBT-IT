@@ -19,3 +19,5 @@
 
 
 <script src="{{ asset('assets/admin/js/dashboards-analytics.js') }}"></script>
+
+@stack('scripts')
