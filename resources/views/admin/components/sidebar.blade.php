@@ -32,8 +32,8 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboards -->
-        <li class="menu-item active open">
-            <a href="javascript:void(0);" class="menu-link">
+        <li class="menu-item open {{ in_array(Route::currentRouteName(), ['dashboard']) ? 'active' : '' }}">
+            <a href="{{ route('dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-smart-home"></i>
                 <div>Dashboards</div>
             </a>
@@ -42,8 +42,8 @@
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Site Features</span>
         </li>
-        <li class="menu-item">
-            <a href="javascript:void(0)" class="menu-link">
+        <li class="menu-item {{ in_array(Route::currentRouteName(), ['members']) ? 'active' : '' }}">
+            <a href="{{ route('members') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-users"></i>
                 <div>Members</div>
             </a>

@@ -33,8 +33,8 @@
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <img class="rounded-circle"
-                                            src="{{ asset('assets/web/img/landing/marketing-agency/hero/avatar.jpg')}}" width="35"
-                                            alt="Avatar">
+                                            src="{{ asset('assets/web/img/landing/marketing-agency/hero/avatar.jpg') }}"
+                                            width="35" alt="Avatar">
                                         <div class="fs-xs ps-2" data-bs-theme="light">
                                             <span class="text-nav fw-bold me-1">Lonoi@1</span>
                                             <span class="text-body-secondary">12 min</span>
@@ -43,21 +43,26 @@
                                 </div>
                                 <video class="d-block w-100" autoplay loop muted
                                     style="border-radius: calc(var(--ar-border-radius) * 1.875);">
-                                    <source src="{{ asset('assets/web/img/landing/marketing-agency/hero/video.mp4')}}" type="video/mp4">
+                                    <source src="{{ asset('assets/web/img/landing/marketing-agency/hero/video.mp4') }}"
+                                        type="video/mp4">
                                 </video>
                             </div>
                         </div>
                         <div class="parallax-layer" data-depth="0.3">
-                            <img src="{{ asset('assets/web/img/landing/marketing-agency/hero/shape01.svg')}}" alt="Background shape">
+                            <img src="{{ asset('assets/web/img/landing/marketing-agency/hero/shape01.svg') }}"
+                                alt="Background shape">
                         </div>
                         <div class="parallax-layer z-2" data-depth="-0.1">
-                            <img src="{{ asset('assets/web/img/landing/marketing-agency/hero/shape02.svg')}}" alt="Background shape">
+                            <img src="{{ asset('assets/web/img/landing/marketing-agency/hero/shape02.svg') }}"
+                                alt="Background shape">
                         </div>
                         <div class="parallax-layer" data-depth="-0.15">
-                            <img src="{{ asset('assets/web/img/landing/marketing-agency/hero/shape03.svg')}}" alt="Background shape">
+                            <img src="{{ asset('assets/web/img/landing/marketing-agency/hero/shape03.svg') }}"
+                                alt="Background shape">
                         </div>
                         <div class="parallax-layer z-2" data-depth="-0.25">
-                            <img src="{{ asset('assets/web/img/landing/marketing-agency/hero/shape04.svg')}}" alt="Background shape">
+                            <img src="{{ asset('assets/web/img/landing/marketing-agency/hero/shape04.svg') }}"
+                                alt="Background shape">
                         </div>
                     </div>
                 </div>
@@ -179,55 +184,64 @@
                         <div class="col">
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
                                 data-aos-delay="300">
-                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/bing.svg')}}" alt="Bing">
+                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/bing.svg') }}"
+                                    alt="Bing">
                             </div>
                         </div>
                         <div class="col">
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
                                 data-aos-delay="500">
-                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/facebook.svg')}}" alt="Facebook">
+                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/facebook.svg') }}"
+                                    alt="Facebook">
                             </div>
                         </div>
                         <div class="col">
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
                                 data-aos-delay="200">
                                 <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/microsoft-dark.svg')}}" alt="Facebook">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/microsoft-dark.svg') }}"
+                                    alt="Facebook">
                                 <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/microsoft-light.svg')}}" alt="Facebook">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/microsoft-light.svg') }}"
+                                    alt="Facebook">
                             </div>
                         </div>
                         <div class="col">
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
                                 data-aos-delay="800">
-                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/google.svg')}}" alt="Google">
+                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/google.svg') }}"
+                                    alt="Google">
                             </div>
                         </div>
                         <div class="col">
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back">
                                 <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-ads-dark.svg')}}" alt="Google Ads">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-ads-dark.svg') }}"
+                                    alt="Google Ads">
                                 <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-ads-light.svg')}}" alt="Google Ads">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-ads-light.svg') }}"
+                                    alt="Google Ads">
                             </div>
                         </div>
                         <div class="col">
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
                                 data-aos-delay="600">
                                 <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/admitad-dark.svg')}}" alt="Admitad">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/admitad-dark.svg') }}"
+                                    alt="Admitad">
                                 <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/admitad-light.svg')}}" alt="Admitad">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/admitad-light.svg') }}"
+                                    alt="Admitad">
                             </div>
                         </div>
                         <div class="col">
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
                                 data-aos-delay="400">
                                 <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-analytics-dark.svg')}}"
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-analytics-dark.svg') }}"
                                     alt="Google Analytics">
                                 <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-analytics-light.svg')}}"
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-analytics-light.svg') }}"
                                     alt="Google Analytics">
                             </div>
                         </div>
@@ -235,18 +249,22 @@
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
                                 data-aos-delay="700">
                                 <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/instagram-dark.svg')}}" alt="Instagram">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/instagram-dark.svg') }}"
+                                    alt="Instagram">
                                 <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/instagram-light.svg')}}" alt="Instagram">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/instagram-light.svg') }}"
+                                    alt="Instagram">
                             </div>
                         </div>
                         <div class="col">
                             <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
                                 data-aos-delay="100">
                                 <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/tiktok-dark.svg')}}" alt="TikTok">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/tiktok-dark.svg') }}"
+                                    alt="TikTok">
                                 <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/tiktok-light.svg')}}" alt="TikTok">
+                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/tiktok-light.svg') }}"
+                                    alt="TikTok">
                             </div>
                         </div>
                     </div>
@@ -343,11 +361,11 @@
             <!-- Parallax image -->
             <div class="position-relative mx-auto" style="max-width: 1198px;">
                 <div class="position-relative z-3" data-aos="fade-left" data-aos-duration="600" data-aos-offset="300">
-                    <img src="{{ asset('assets/web/img/landing/marketing-agency/about/01.png')}}" alt="Image">
+                    <img src="{{ asset('assets/web/img/landing/marketing-agency/about/01.png') }}" alt="Image">
                 </div>
                 <div class="position-absolute top-0 start-0 z-2" data-aos="fade-right" data-aos-duration="600"
                     data-aos-offset="300">
-                    <img src="{{ asset('assets/web/img/landing/marketing-agency/about/02.png')}}" alt="Image">
+                    <img src="{{ asset('assets/web/img/landing/marketing-agency/about/02.png') }}" alt="Image">
                 </div>
                 <div class="position-absolute top-0 start-0 z-4" data-aos="zoom-in" data-aos-duration="500"
                     data-aos-offset="300" data-aos-delay="900" data-aos-easing="ease-out-back">
@@ -390,11 +408,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-gray.svg')}}" width="120"
-                                        alt="Klinos">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-gray.svg') }}"
+                                        width="120" alt="Klinos">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-light.svg')}}" width="120"
-                                        alt="Klinos">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-light.svg') }}"
+                                        width="120" alt="Klinos">
                                 </div>
                             </div>
                         </div>
@@ -403,11 +421,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-gray.svg')}}" width="147"
-                                        alt="Starcraft">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-gray.svg') }}"
+                                        width="147" alt="Starcraft">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-light.svg')}}" width="147"
-                                        alt="Starcraft">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-light.svg') }}"
+                                        width="147" alt="Starcraft">
                                 </div>
                             </div>
                         </div>
@@ -416,11 +434,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/airbnb-gray.svg')}}" width="121"
-                                        alt="Airbnb">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/airbnb-gray.svg') }}"
+                                        width="121" alt="Airbnb">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/airbnb-light.svg')}}" width="121"
-                                        alt="Airbnb">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/airbnb-light.svg') }}"
+                                        width="121" alt="Airbnb">
                                 </div>
                             </div>
                         </div>
@@ -429,11 +447,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-gray.svg')}}" width="132"
-                                        alt="Alpine">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-gray.svg') }}"
+                                        width="132" alt="Alpine">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-light.svg')}}" width="132"
-                                        alt="Alpine">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-light.svg') }}"
+                                        width="132" alt="Alpine">
                                 </div>
                             </div>
                         </div>
@@ -442,11 +460,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/foster-gray.svg')}}" width="132"
-                                        alt="Foster">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/foster-gray.svg') }}"
+                                        width="132" alt="Foster">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/foster-light.svg')}}" width="132"
-                                        alt="Foster">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/foster-light.svg') }}"
+                                        width="132" alt="Foster">
                                 </div>
                             </div>
                         </div>
@@ -455,11 +473,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/champion-gray.svg')}}" width="130"
-                                        alt="Champion">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/champion-gray.svg') }}"
+                                        width="130" alt="Champion">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/champion-light.svg')}}" width="130"
-                                        alt="Champion">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/champion-light.svg') }}"
+                                        width="130" alt="Champion">
                                 </div>
                             </div>
                         </div>
@@ -468,11 +486,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-gray.svg')}}" width="147"
-                                        alt="Starcraft">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-gray.svg') }}"
+                                        width="147" alt="Starcraft">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-light.svg')}}" width="147"
-                                        alt="Starcraft">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-light.svg') }}"
+                                        width="147" alt="Starcraft">
                                 </div>
                             </div>
                         </div>
@@ -481,11 +499,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-gray.svg')}}" width="120"
-                                        alt="Klinos">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-gray.svg') }}"
+                                        width="120" alt="Klinos">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-light.svg')}}" width="120"
-                                        alt="Klinos">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-light.svg') }}"
+                                        width="120" alt="Klinos">
                                 </div>
                             </div>
                         </div>
@@ -494,11 +512,11 @@
                                 <div
                                     class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
                                     <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-gray.svg')}}" width="132"
-                                        alt="Alpine">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-gray.svg') }}"
+                                        width="132" alt="Alpine">
                                     <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-light.svg')}}" width="132"
-                                        alt="Alpine">
+                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-light.svg') }}"
+                                        width="132" alt="Alpine">
                                 </div>
                             </div>
                         </div>
@@ -550,7 +568,8 @@
 
                             <!-- Item -->
                             <div class="binded-item active" id="author1">
-                                <img class="d-block rounded-circle mb-3" src="{{ asset('assets/web/img/avatar/13.jpg')}}" width="86"
+                                <img class="d-block rounded-circle mb-3"
+                                    src="{{ asset('assets/web/img/avatar/13.jpg') }}" width="86"
                                     alt="Lilianna Bocouse">
                                 <h4 class="mb-0">Lilianna Bocouse</h4>
                                 <p class="fs-lg text-body-secondary mb-0">Head of Marketing</p>
@@ -558,7 +577,8 @@
 
                             <!-- Item -->
                             <div class="binded-item" id="author2">
-                                <img class="d-block rounded-circle mb-3" src="{{ asset('assets/web/img/avatar/14.jpg')}}" width="86"
+                                <img class="d-block rounded-circle mb-3"
+                                    src="{{ asset('assets/web/img/avatar/14.jpg') }}" width="86"
                                     alt="Darell Steward">
                                 <h4 class="mb-0">Darell Steward</h4>
                                 <p class="fs-lg text-body-secondary mb-0">Project Manager</p>
@@ -566,7 +586,8 @@
 
                             <!-- Item -->
                             <div class="binded-item" id="author3">
-                                <img class="d-block rounded-circle mb-3" src="{{ asset('assets/web/img/avatar/15.jpg')}}" width="86"
+                                <img class="d-block rounded-circle mb-3"
+                                    src="{{ asset('assets/web/img/avatar/15.jpg') }}" width="86"
                                     alt="Annette Black">
                                 <h4 class="mb-0">Annette Black</h4>
                                 <p class="fs-lg text-body-secondary mb-0">Lead Designer</p>
@@ -574,7 +595,8 @@
 
                             <!-- Item -->
                             <div class="binded-item" id="author4">
-                                <img class="d-block rounded-circle mb-3" src="{{ asset('assets/web/img/avatar/16.jpg')}}" width="86"
+                                <img class="d-block rounded-circle mb-3"
+                                    src="{{ asset('assets/web/img/avatar/16.jpg') }}" width="86"
                                     alt="Ralph Edwards">
                                 <h4 class="mb-0">Ralph Edwards</h4>
                                 <p class="fs-lg text-body-secondary mb-0">CEO, Co-Founder</p>
@@ -662,19 +684,22 @@
 
                     <!-- Item -->
                     <div class="binded-item active" id="image1">
-                        <img class="d-block rounded-5" src="{{ asset('assets/web/img/landing/marketing-agency/case-studies/01.jpg')}}"
+                        <img class="d-block rounded-5"
+                            src="{{ asset('assets/web/img/landing/marketing-agency/case-studies/01.jpg') }}"
                             alt="Image">
                     </div>
 
                     <!-- Item -->
                     <div class="binded-item" id="image2">
-                        <img class="d-block rounded-5" src="{{ asset('assets/web/img/landing/marketing-agency/case-studies/02.jpg')}}"
+                        <img class="d-block rounded-5"
+                            src="{{ asset('assets/web/img/landing/marketing-agency/case-studies/02.jpg') }}"
                             alt="Image">
                     </div>
 
                     <!-- Item -->
                     <div class="binded-item" id="image3">
-                        <img class="d-block rounded-5" src="{{ asset('assets/web/img/landing/marketing-agency/case-studies/03.jpg')}}"
+                        <img class="d-block rounded-5"
+                            src="{{ asset('assets/web/img/landing/marketing-agency/case-studies/03.jpg') }}"
                             alt="Image">
                     </div>
                 </div>
@@ -845,8 +870,8 @@
                     <!-- Item -->
                     <div class="swiper-slide w-auto">
                         <div class="card-hover text-center" style="max-width: 306px;">
-                            <img class="d-block rounded-5 mb-4" src="{{ asset('assets/web/img/landing/creative-agency/team/02.jpg')}}"
-                                alt="Image">
+                            <img class="d-block rounded-5 mb-4"
+                                src="{{ asset('assets/web/img/landing/creative-agency/team/02.jpg') }}" alt="Image">
                             <h3 class="h5 mb-1">Alisa Black</h3>
                             <p class="text-body-secondary mb-2">Head of marketing</p>
                             <div class="d-none d-lg-flex nav justify-content-center opacity-0">
@@ -883,8 +908,8 @@
                     <!-- Item -->
                     <div class="swiper-slide w-auto">
                         <div class="card-hover text-center" style="max-width: 306px;">
-                            <img class="d-block rounded-5 mb-4" src="{{ asset('assets/web/img/landing/creative-agency/team/01.jpg')}}"
-                                alt="Image">
+                            <img class="d-block rounded-5 mb-4"
+                                src="{{ asset('assets/web/img/landing/creative-agency/team/01.jpg') }}" alt="Image">
                             <h3 class="h5 mb-1">Guy Hawkins</h3>
                             <p class="text-body-secondary mb-2">President of Sales</p>
                             <div class="d-none d-lg-flex nav justify-content-center opacity-0">
@@ -921,8 +946,8 @@
                     <!-- Item -->
                     <div class="swiper-slide w-auto">
                         <div class="card-hover text-center" style="max-width: 306px;">
-                            <img class="d-block rounded-5 mb-4" src="{{ asset('assets/web/img/landing/creative-agency/team/06.jpg')}}"
-                                alt="Image">
+                            <img class="d-block rounded-5 mb-4"
+                                src="{{ asset('assets/web/img/landing/creative-agency/team/06.jpg') }}" alt="Image">
                             <h3 class="h5 mb-1">Robert Fox</h3>
                             <p class="text-body-secondary mb-2">Web Designer</p>
                             <div class="d-none d-lg-flex nav justify-content-center opacity-0">
@@ -959,8 +984,8 @@
                     <!-- Item -->
                     <div class="swiper-slide w-auto">
                         <div class="card-hover text-center" style="max-width: 306px;">
-                            <img class="d-block rounded-5 mb-4" src="{{ asset('assets/web/img/landing/creative-agency/team/04.jpg')}}"
-                                alt="Image">
+                            <img class="d-block rounded-5 mb-4"
+                                src="{{ asset('assets/web/img/landing/creative-agency/team/04.jpg') }}" alt="Image">
                             <h3 class="h5 mb-1">Jane Cooper</h3>
                             <p class="text-body-secondary mb-2">Marketing Coordinator</p>
                             <div class="d-none d-lg-flex nav justify-content-center opacity-0">
@@ -997,8 +1022,8 @@
                     <!-- Item -->
                     <div class="swiper-slide w-auto">
                         <div class="card-hover text-center" style="max-width: 306px;">
-                            <img class="d-block rounded-5 mb-4" src="{{ asset('assets/web/img/landing/creative-agency/team/03.jpg')}}"
-                                alt="Image">
+                            <img class="d-block rounded-5 mb-4"
+                                src="{{ asset('assets/web/img/landing/creative-agency/team/03.jpg') }}" alt="Image">
                             <h3 class="h5 mb-1">Cody Fisher</h3>
                             <p class="text-body-secondary mb-2">SMM Specialist</p>
                             <div class="d-none d-lg-flex nav justify-content-center opacity-0">
@@ -1035,8 +1060,8 @@
                     <!-- Item -->
                     <div class="swiper-slide w-auto">
                         <div class="card-hover text-center" style="max-width: 306px;">
-                            <img class="d-block rounded-5 mb-4" src="{{ asset('assets/web/img/landing/creative-agency/team/05.jpg')}}"
-                                alt="Image">
+                            <img class="d-block rounded-5 mb-4"
+                                src="{{ asset('assets/web/img/landing/creative-agency/team/05.jpg') }}" alt="Image">
                             <h3 class="h5 mb-1">Jacob Jones</h3>
                             <p class="text-body-secondary mb-2">Web Designer</p>
                             <div class="d-none d-lg-flex nav justify-content-center opacity-0">
@@ -1114,8 +1139,8 @@
                             </div>
                             <div class="card-footer pt-3">
                                 <a class="d-flex align-items-center text-decoration-none pb-2" href="#">
-                                    <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/10.jpg')}}" width="48"
-                                        alt="Post author">
+                                    <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/10.jpg') }}"
+                                        width="48" alt="Post author">
                                     <h6 class="ps-3 mb-0">Guy Hawkins</h6>
                                 </a>
                             </div>
@@ -1140,8 +1165,8 @@
                             </div>
                             <div class="card-footer pt-3">
                                 <a class="d-flex align-items-center text-decoration-none pb-2" href="#">
-                                    <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/07.jpg')}}" width="48"
-                                        alt="Post author">
+                                    <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/07.jpg') }}"
+                                        width="48" alt="Post author">
                                     <h6 class="ps-3 mb-0">Cody Fisher</h6>
                                 </a>
                             </div>
@@ -1165,8 +1190,8 @@
                             </div>
                             <div class="card-footer pt-3">
                                 <a class="d-flex align-items-center text-decoration-none pb-2" href="#">
-                                    <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/09.jpg')}}" width="48"
-                                        alt="Post author">
+                                    <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/09.jpg') }}"
+                                        width="48" alt="Post author">
                                     <h6 class="ps-3 mb-0">Jane Cooper</h6>
                                 </a>
                             </div>
@@ -1265,5 +1290,4 @@
             </div>
         </div>
     </section>
-    </main>
 @endsection

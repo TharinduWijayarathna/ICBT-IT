@@ -10,9 +10,7 @@ class MemberController extends AuthController
 {
     public function index()
     {
-        $response['members'] = Member::all();
-
-        return view('admin.members.index')->with($response);
+        return view('admin.pages.members.index');
     }
 
     public function create()
