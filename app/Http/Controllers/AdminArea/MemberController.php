@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\AdminArea;
 
-use App\Http\Controllers\Controller;
+use App\Models\Image;
 use App\Models\Member;
 use Illuminate\Http\Request;
 
@@ -13,8 +13,41 @@ class MemberController extends AuthController
         return view('admin.pages.members.index');
     }
 
-    public function create()
+    public function all(Request $request)
     {
-        return view('admin.members.components.add-new-member');
+        $response['members'] = Member::getByFilter($request->all());
+        return view('admin.pages.members.components.table', $response);
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:members,email',
+            'designation' => 'required',
+            'batch' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $extension = $request->file('image')->extension();
+        $imageName = time() . '.' . $request->file('image')->extension();
+        $request->file('image')->move(public_path('member_images'), $imageName);
+
+        $image = Image::create([
+            'path' => 'member_images/' . $imageName,
+            'name' => $imageName,
+            'extension' => $extension,
+        ]);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'designation' => $request->designation,
+            'batch' => $request->batch,
+            'image_id' => $image->id,
+        ];
+
+        Member::create($data);
+        return redirect()->route('members');
     }
 }

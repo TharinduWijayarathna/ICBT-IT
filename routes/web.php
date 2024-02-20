@@ -23,7 +23,7 @@ Route::get('/dashboard',[AdminAreaHomeController::class, 'index'])->name('dashbo
 Route::prefix('members')->group(function () {
     Route::get('/',[MemberController::class, 'index'])->name('members');
     Route::post('/store',[MemberController::class, 'store'])->name('members.store');
-    Route::get('/create',[MemberController::class, 'create'])->name('members.create');
+    Route::get('/all',[MemberController::class, 'all'])->name('members.all');
 });
 
 require __DIR__.'/auth.php';

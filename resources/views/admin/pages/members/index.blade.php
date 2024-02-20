@@ -19,71 +19,34 @@
                 </div>
             </div>
 
-            <!-- DataTable with Buttons -->
-            <div class="card">
+            <div class="card container">
                 <div class="card-datatable table-responsive pt-0">
                     <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
 
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select
-                                            name="DataTables_Table_0_length" class="form-select">
+                                            name="DataTables_Table_0_length" class="form-select" id="page_count"
+                                            onchange="getMembers()">
+                                            <option value="15" selected>15</option>
                                             <option value="25">25</option>
                                             <option value="50">50</option>
-                                            <option value="100">100</option>
                                         </select> entries</label></div>
                             </div>
                             <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end">
                                 <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input
-                                            type="search" class="form-control" placeholder=""></label></div>
+                                            type="search" class="form-control" placeholder="Search" oninput="getMembers()"
+                                            id="search_value"></label></div>
                             </div>
                         </div>
-                        <table class="datatables-basic table dataTable no-footer dtr-column" id="DataTables_Table_0">
-                            <thead>
-                                <tr>
+                        <div id="members_table">
 
-
-                                    <th class="sorting">Name</th>
-                                    <th class="sorting">Email</th>
-                                    <th class="sorting">Date</th>
-                                    <th class="sorting">Salary</th>
-                                    <th class="sorting">Status</th>
-                                    <th class="sorting_disabled">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="odd">
-                                    <td class="">Tiger Nixon</td>
-                                    <td class="">Tiger Nixon</td>
-                                    <td class="">Tiger Nixon</td>
-                                    <td class="">Tiger Nixon</td>
-                                    <td class="">Tiger Nixon</td>
-                                    <td class="">Tiger Nixon</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
-                                    Showing 0 to 0 of 0 entries</div>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
-                                    <ul class="pagination">
-                                        <li class="paginate_button page-item previous disabled"
-                                            id="DataTables_Table_0_previous"><a aria-disabled="true" role="link"
-                                                data-dt-idx="previous" tabindex="-1" class="page-link">Previous</a></li>
-                                        <li class="paginate_button page-item next disabled" id="DataTables_Table_0_next">
-                                            <a aria-disabled="true" role="link" data-dt-idx="next" tabindex="-1"
-                                                class="page-link">Next</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -97,60 +60,33 @@
                         <h3 class="mb-2">Add New Member</h3>
                         <p class="text-muted">Fill in the form below to add a new member.</p>
                     </div>
-                    <form id="editUserForm" class="row g-3" onsubmit="return false">
+                    <form id="editUserForm" class="row g-3" action="{{ route('members.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="col-12 col-md-6">
-                            <label class="form-label" for="modalEditUserFirstName">First Name</label>
-                            <input type="text" id="modalEditUserFirstName" name="modalEditUserFirstName"
-                                class="form-control" placeholder="John" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label class="form-label" for="modalEditUserLastName">Last Name</label>
-                            <input type="text" id="modalEditUserLastName" name="modalEditUserLastName"
-                                class="form-control" placeholder="Doe" />
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label" for="modalEditUserName">Username</label>
-                            <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control"
-                                placeholder="john.doe.007" />
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" id="modalEditUserFirstName" name="name"
+                                placeholder="Name" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label" for="modalEditUserEmail">Email</label>
-                            <input type="text" id="modalEditUserEmail" name="modalEditUserEmail" class="form-control"
-                                placeholder="example@domain.com" />
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="modalEditUserEmail" name="email"
+                                placeholder="Email" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label" for="modalEditUserStatus">Status</label>
-                            <select id="modalEditUserStatus" name="modalEditUserStatus" class="select2 form-select"
-                                aria-label="Default select example">
-                                <option selected>Status</option>
-                                <option value="1">Active</option>
-                                <option value="2">Inactive</option>
-                                <option value="3">Suspended</option>
-                            </select>
+                            <label class="form-label
+                                ">Designation</label>
+                            <input type="text" class="form-control" id="modalEditUserDesignation" name="designation"
+                                placeholder="Designation" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label" for="modalEditTaxID">Tax ID</label>
-                            <input type="text" id="modalEditTaxID" name="modalEditTaxID"
-                                class="form-control modal-edit-tax-id" placeholder="123 456 7890" />
+                            <label class="form-label    ">Batch</label>
+                            <input type="text" class="form-control" id="modalEditUserBatch" name="batch"
+                                placeholder="Batch" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label" for="modalEditUserPhone">Phone Number</label>
-                            <div class="input-group">
-                                <span class="input-group-text">US (+1)</span>
-                                <input type="text" id="modalEditUserPhone" name="modalEditUserPhone"
-                                    class="form-control phone-number-mask" placeholder="202 555 0111" />
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <label class="switch">
-                                <input type="checkbox" class="switch-input">
-                                <span class="switch-toggle-slider">
-                                    <span class="switch-on"></span>
-                                    <span class="switch-off"></span>
-                                </span>
-                                <span class="switch-label">Use as a billing address?</span>
-                            </label>
+                            <label class="form-label    ">Image</label>
+                            <input type="file" class="form-control" id="modalEditUserImage" name="image"
+                                placeholder="Image" />
                         </div>
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
@@ -163,3 +99,40 @@
         </div>
     </div>
 @endsection
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            getMembers();
+        });
+
+        $(document).on('click', '.pagination a', function(event) {
+            event.preventDefault();
+            var page = $(this).attr('href').split('page=')[1];
+            getMembers(page);
+        });
+
+
+        function getMembers(page = 1) {
+
+            var name = $('#search_value').val();
+            var count = $('#page_count').val();
+            var data = {
+                name: name,
+                count: count
+            };
+            $.ajax({
+                url: "/members/all?page=" + page,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: 'GET',
+                dataType: '',
+                data: data,
+                success: function(response) {
+                    $('#members_table').html(response);
+                    $('.navigation a').attr("disabled", "disabled");
+                }
+            });
+        }
+    </script>
+@endpush
