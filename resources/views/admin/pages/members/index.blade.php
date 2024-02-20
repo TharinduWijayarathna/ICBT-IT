@@ -60,7 +60,8 @@
                         <h3 class="mb-2">Add New Member</h3>
                         <p class="text-muted">Fill in the form below to add a new member.</p>
                     </div>
-                    <form id="editUserForm" class="row g-3" action="{{ route('members.store') }}" method="POST" enctype="multipart/form-data">
+                    <form id="editUserForm" class="row g-3" action="{{ route('members.store') }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="col-12 col-md-6">
                             <label class="form-label">Name</label>
@@ -133,6 +134,36 @@
                     $('.navigation a').attr("disabled", "disabled");
                 }
             });
+        }
+
+        function deleteMember(id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: '/members/' + id + '/delete',
+                        type: 'DELETE',
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        success: function(response) {
+                            getMembers();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    });
+                }
+            })
         }
     </script>
 @endpush

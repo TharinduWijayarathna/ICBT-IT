@@ -50,4 +50,22 @@ class MemberController extends AuthController
         Member::create($data);
         return redirect()->route('members');
     }
+
+    public function delete($id)
+    {
+        $member = Member::find($id);
+
+        $image = Image::find($member->image_id);
+        if ($image) {
+            $imagePath = public_path($image->path);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+            $image->delete();
+        }
+
+        $member->delete();
+
+        return true;
+    }
 }

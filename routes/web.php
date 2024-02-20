@@ -24,6 +24,7 @@ Route::prefix('members')->group(function () {
     Route::get('/',[MemberController::class, 'index'])->name('members');
     Route::post('/store',[MemberController::class, 'store'])->name('members.store');
     Route::get('/all',[MemberController::class, 'all'])->name('members.all');
+    Route::delete('/{id}/delete',[MemberController::class, 'delete'])->name('members.delete');
 });
 
 require __DIR__.'/auth.php';

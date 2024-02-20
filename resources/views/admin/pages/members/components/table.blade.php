@@ -5,7 +5,7 @@
             <th class="sorting">Email</th>
             <th class="sorting">Designation</th>
             <th class="sorting">Batch</th>
-            <th class="sorting">Image</th>
+            <th class="text-center">Image</th>
             <th class="text-center">Actions</th>
         </tr>
     </thead>
@@ -16,7 +16,7 @@
                 <td class="">{{ $member->email }}</td>
                 <td class="">{{ $member->designation }}</td>
                 <td class="">{{ $member->batch }}</td>
-                <td class="">
+                <td class="text-center">
                     @isset($member->image)
                         <img src="{{ asset('member_images/' . $member->image->name) }}" alt="Image" width="100"
                             height="100">

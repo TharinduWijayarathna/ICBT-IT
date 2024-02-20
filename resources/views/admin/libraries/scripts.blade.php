@@ -13,6 +13,7 @@
 <script src="{{ asset('assets/admin/vendor/libs/apex-charts/apexcharts.js') }}"></script>
 <script src="{{ asset('assets/admin/vendor/libs/swiper/swiper.js') }}"></script>
 <script src="{{ asset('assets/admin/vendor/libs/datatables-bs5/datatables-bootstrap5.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 <script src="{{ asset('assets/admin/js/main.js') }}"></script>
