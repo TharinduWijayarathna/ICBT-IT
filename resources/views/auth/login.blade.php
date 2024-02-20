@@ -7,7 +7,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Login</title>
+    <title>Loginnn</title>
 
 
     @include('admin.libraries.styles')
@@ -19,12 +19,12 @@
     <!-- Content -->
 
     <div class="authentication-wrapper authentication-cover authentication-bg">
-        <div class="authentication-inner row">
+        <div class="authentication-inner col-12 row">
             <!-- /Left Text -->
-            <div class="d-none d-lg-flex col-lg-7 p-0">
+            <div class="d-none d-lg-flex col-lg-7 p-5">
                 <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
-                    <img src="{{ asset('assets/img/illustrations/auth-login-illustration-light.png') }}"
-                        alt="auth-login-cover" class="img-fluid my-5 auth-illustration">
+                    <img src="{{ asset('assets/admin/img/illustrations/auth-login-illustration-light.png') }}"
+                        alt="auth-login-cover" class="img-fluid auth-illustration my-5">
 
 
                 </div>
@@ -37,7 +37,7 @@
                     <!-- Logo -->
                     <div class="app-brand mb-4">
                         <a href="index.html" class="app-brand-link gap-2">
-                            <span class="app-brand-logo demo">
+                            {{-- <span class="app-brand-logo demo">
                                 <svg width="32" height="22" viewBox="0 0 32 22" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -53,7 +53,7 @@
                                         d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
                                         fill="#7367F0" />
                                 </svg>
-                            </span>
+                            </span> --}}
                         </a>
                     </div>
                     <!-- /Logo -->
@@ -104,7 +104,7 @@
 
     <!-- / Content -->
 
-    #@include('admin.libraries.scripts')
+    @include('admin.libraries.scripts')
 
 </body>
 
