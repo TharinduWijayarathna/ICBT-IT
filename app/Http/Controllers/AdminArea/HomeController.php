@@ -6,8 +6,7 @@ class HomeController extends AuthController
 {
     public function index()
     {
-      
 
-        return view('admin.home.index');
+        return view('admin.pages.home.index');
     }
 }
