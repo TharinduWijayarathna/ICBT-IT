@@ -125,8 +125,6 @@
                     '<span style="padding-right: 10px;"><img src="{{ asset('assets/admin/img/connectivity/connectivity_connected.png') }}" height="20" width="20" /></span>';
             }
 
-            // You can also use connectionType if needed
-            console.log("Connection Type:", connectionType);
         }
 
         // Call the function initially
