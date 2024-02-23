@@ -1,10 +1,12 @@
 <?php
 
-use App\Http\Controllers\AdminArea\HomeController as AdminAreaHomeController;
-use App\Http\Controllers\AdminArea\MemberController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PublicArea\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminArea\EventController;
+use App\Http\Controllers\PublicArea\HomeController;
+use App\Http\Controllers\AdminArea\MemberController;
+use App\Http\Controllers\AdminArea\BlogPostController;
+use App\Http\Controllers\AdminArea\HomeController as AdminAreaHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,24 @@ Route::prefix('members')->group(function () {
     Route::get('/all',[MemberController::class, 'all'])->name('members.all');
     Route::post('/{id}/update',[MemberController::class, 'update'])->name('members.update');
     Route::delete('/{id}/delete',[MemberController::class, 'delete'])->name('members.delete');
+});
+
+Route::prefix('events')->group(function () {
+    Route::get('/',[EventController::class, 'index'])->name('events');
+    Route::get('/{id}/get',[EventController::class, 'get'])->name('events.get');
+    Route::post('/store',[EventController::class, 'store'])->name('events.store');
+    Route::get('/all',[EventController::class, 'all'])->name('events.all');
+    Route::post('/{id}/update',[EventController::class, 'update'])->name('events.update');
+    Route::delete('/{id}/delete',[EventController::class, 'delete'])->name('events.delete');
+});
+
+Route::prefix('blog_posts')->group(function () {
+    Route::get('/',[BlogPostController::class, 'index'])->name('blog_posts');
+    Route::get('/{id}/get',[BlogPostController::class, 'get'])->name('blog_posts.get');
+    Route::post('/store',[BlogPostController::class, 'store'])->name('blog_posts.store');
+    Route::get('/all',[BlogPostController::class, 'all'])->name('blog_posts.all');
+    Route::post('/{id}/update',[BlogPostController::class, 'update'])->name('blog_posts.update');
+    Route::delete('/{id}/delete',[BlogPostController::class, 'delete'])->name('blog_posts.delete');
 });
 
 require __DIR__.'/auth.php';
