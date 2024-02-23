@@ -60,16 +60,69 @@
                         <h3 class="mb-2">Add New Member</h3>
                         <p class="text-muted">Fill in the form below to add a new member.</p>
                     </div>
-                    <form id="editUserForm" class="row g-3" action="{{ route('members.store') }}" method="POST"
+                    <form id="addMemberForm" class="row g-3" action="{{ route('members.store') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="col-12 col-md-6">
                             <label class="form-label">Name</label>
-                            <input type="text" class="form-control" id="modalEditUserFirstName" name="name"
+                            <input type="text" class="form-control" id="modalCreateUserFirstName" name="name"
                                 placeholder="Name" />
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="modalCreateUserEmail" name="email"
+                                placeholder="Email" />
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label
+                                ">Designation</label>
+                            <input type="text" class="form-control" id="modalCreateUserDesignation" name="designation"
+                                placeholder="Designation" />
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label    ">Batch</label>
+                            <input type="text" class="form-control" id="modalCreateUserBatch" name="batch"
+                                placeholder="Batch" />
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label    ">Image</label>
+                            <input type="file" class="form-control" id="modalCreateUserImage" name="image"
+                                placeholder="Image" />
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
+                            <button type="reset" class="btn btn-label-secondary" data-bs-dismiss="modal"
+                                aria-label="Close">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Member Modal -->
+    <div class="modal fade" id="editMemberModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-simple modal-edit-user">
+            <div class="modal-content p-3 p-md-5">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center mb-4">
+                        <h3 class="mb-2">Edit Member</h3>
+                        <p class="text-muted mb-0">Fill in the form below to edit the member.</p>
+                    </div>
+                    <form id="editMemberForm" class="row g-3" action="" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf
+                        <input type="text" id="modalEditUserId" name="id" hidden />
+                        <div class="col-12 col-md-6">
+                            <label class="form-label
+                                ">Name</label>
+                            <input type="text" class="form-control" id="modalEditUserFirstName" name="name"
+                                placeholder="Name" />
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label
+                                ">Email</label>
                             <input type="email" class="form-control" id="modalEditUserEmail" name="email"
                                 placeholder="Email" />
                         </div>
@@ -80,12 +133,12 @@
                                 placeholder="Designation" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label    ">Batch</label>
+                            <label class="form-label">Batch</label>
                             <input type="text" class="form-control" id="modalEditUserBatch" name="batch"
                                 placeholder="Batch" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label    ">Image</label>
+                            <label class="form-label">Image</label>
                             <input type="file" class="form-control" id="modalEditUserImage" name="image"
                                 placeholder="Image" />
                         </div>
@@ -112,9 +165,7 @@
             getMembers(page);
         });
 
-
         function getMembers(page = 1) {
-
             var name = $('#search_value').val();
             var count = $('#page_count').val();
             var data = {
@@ -127,11 +178,12 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 type: 'GET',
-                dataType: '',
+                dataType: 'html', // Specify the data type as 'html'
                 data: data,
                 success: function(response) {
                     $('#members_table').html(response);
-                    $('.navigation a').attr("disabled", "disabled");
+                    $('.pagination a').attr("disabled",
+                    false); // Corrected the attribute name and removed unnecessary space
                 }
             });
         }
@@ -163,7 +215,26 @@
                         }
                     });
                 }
-            })
+            });
+        }
+
+        function editMember(id) {
+            $.ajax({
+                url: '/members/' + id + '/get',
+                type: 'GET',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(response) {
+                    $('#modalEditUserId').val(response.id);
+                    $('#modalEditUserFirstName').val(response.name);
+                    $('#modalEditUserEmail').val(response.email);
+                    $('#modalEditUserDesignation').val(response.designation);
+                    $('#modalEditUserBatch').val(response.batch);
+                    $('#editMemberForm').attr('action', '/members/' + response.id + '/update');
+                    $('#editMemberModal').modal('show');
+                }
+            });
         }
     </script>
 @endpush

@@ -22,8 +22,10 @@ Route::get('/dashboard',[AdminAreaHomeController::class, 'index'])->name('dashbo
 
 Route::prefix('members')->group(function () {
     Route::get('/',[MemberController::class, 'index'])->name('members');
+    Route::get('/{id}/get',[MemberController::class, 'get'])->name('members.get');
     Route::post('/store',[MemberController::class, 'store'])->name('members.store');
     Route::get('/all',[MemberController::class, 'all'])->name('members.all');
+    Route::post('/{id}/update',[MemberController::class, 'update'])->name('members.update');
     Route::delete('/{id}/delete',[MemberController::class, 'delete'])->name('members.delete');
 });
 
