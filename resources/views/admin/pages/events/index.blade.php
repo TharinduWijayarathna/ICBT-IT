@@ -6,16 +6,16 @@
             <div class="row">
                 <div class="col-6">
                     <h4 class="mb-4">
-                        Member Management
+                        Event Management
                     </h4>
 
 
                 </div>
                 <div class="col-6 text-end">
                     <button class="btn btn-secondary create-new btn-primary waves-effect waves-light" data-bs-toggle="modal"
-                        data-bs-target="#addMemberModal" type="button"><span><i class="ti ti-plus me-sm-1"></i> <span
+                        data-bs-target="#addEventModal" type="button"><span><i class="ti ti-plus me-sm-1"></i> <span
                                 class="d-none d-sm-inline-block">Add
-                                Member</span></span></button>
+                                Event</span></span></button>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
                             <div class="col-sm-12 col-md-6">
                                 <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select
                                             name="DataTables_Table_0_length" class="form-select" id="page_count"
-                                            onchange="getMembers()">
+                                            onchange="getEvents()">
                                             <option value="15" selected>15</option>
                                             <option value="25">25</option>
                                             <option value="50">50</option>
@@ -35,11 +35,11 @@
                             </div>
                             <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end">
                                 <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input
-                                            type="search" class="form-control" placeholder="Search" oninput="getMembers()"
+                                            type="search" class="form-control" placeholder="Search" oninput="getEvents()"
                                             id="search_value"></label></div>
                             </div>
                         </div>
-                        <div id="members_table">
+                        <div id="events_table">
 
                         </div>
 
@@ -50,44 +50,41 @@
         </div>
     </div>
 
-    <!-- Add Member Modal -->
-    <div class="modal fade" id="addMemberModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-simple modal-edit-user">
+    <!-- Add Event Modal -->
+    <div class="modal fade" id="addEventModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-simple modal-edit-event">
             <div class="modal-content p-3 p-md-5">
                 <div class="modal-body">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="text-center mb-4">
-                        <h3 class="mb-2">Add New Member</h3>
-                        <p class="text-muted">Fill in the form below to add a new member.</p>
+                        <h3 class="mb-2">Add New Event</h3>
+                        <p class="text-muted">Fill in the form below to add a new Event.</p>
                     </div>
-                    <form id="addMemberForm" class="row g-3" action="{{ route('members.store') }}" method="POST"
+                    <form id="addEventForm" class="row g-3" action="{{ route('events.store') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="col-12 col-md-6">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" id="modalCreateUserFirstName" name="name"
-                                placeholder="Name" />
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-control" name="title" placeholder="Title" />
+                        </div>
+
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">Start Date</label>
+                            <input type="date" class="form-control" name="start_date" placeholder="Start Date" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" id="modalCreateUserEmail" name="email"
-                                placeholder="Email" />
+                            <label class="form-label">End Date</label>
+                            <input type="date" class="form-control" name="end_date" placeholder="End Date" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label
-                                ">Designation</label>
-                            <input type="text" class="form-control" id="modalCreateUserDesignation" name="designation"
-                                placeholder="Designation" />
+                            <label class="form-label">Image</label>
+                            <input type="file" class="form-control" name="image" placeholder="Image" />
                         </div>
-                        <div class="col-12 col-md-6">
-                            <label class="form-label    ">Batch</label>
-                            <input type="text" class="form-control" id="modalCreateUserBatch" name="batch"
-                                placeholder="Batch" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label class="form-label    ">Image</label>
-                            <input type="file" class="form-control" id="modalCreateUserImage" name="image"
-                                placeholder="Image" />
+
+                        <div class="col-12">
+                            <label class="form-label ">Description</label>
+                            <textarea class="form-control" name="description" placeholder="Description" style="resize: none;" rows="5"></textarea>
                         </div>
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
@@ -100,47 +97,44 @@
         </div>
     </div>
 
-    <!-- Edit Member Modal -->
-    <div class="modal fade" id="editMemberModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-simple modal-edit-user">
+    <!-- Edit Event Modal -->
+    <div class="modal fade" id="editEventModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-simple modal-edit-Event">
             <div class="modal-content p-3 p-md-5">
                 <div class="modal-body">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="text-center mb-4">
-                        <h3 class="mb-2">Edit Member</h3>
-                        <p class="text-muted mb-0">Fill in the form below to edit the member.</p>
+                        <h3 class="mb-2">Edit Event</h3>
+                        <p class="text-muted mb-0">Fill in the form below to edit the Event.</p>
                     </div>
-                    <form id="editMemberForm" class="row g-3" action="" method="POST"
+                    <form id="editEventForm" class="row g-3" action="" method="POST"
                         enctype="multipart/form-data">
                         @csrf
-                        <input type="text" id="modalEditUserId" name="id" hidden />
+                        <input type="text" id="modalEditEventId" name="id" hidden />
                         <div class="col-12 col-md-6">
-                            <label class="form-label
-                                ">Name</label>
-                            <input type="text" class="form-control" id="modalEditUserFirstName" name="name"
-                                placeholder="Name" />
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-control" name="title" placeholder="Title"
+                                id="modalEditEventTitle" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label
-                                ">Email</label>
-                            <input type="email" class="form-control" id="modalEditUserEmail" name="email"
-                                placeholder="Email" />
+                            <label class="form-label">Start Date</label>
+                            <input type="date" class="form-control" name="start_date" placeholder="Start Date"
+                                id="modalEditEventStartDate" />
                         </div>
                         <div class="col-12 col-md-6">
-                            <label class="form-label
-                                ">Designation</label>
-                            <input type="text" class="form-control" id="modalEditUserDesignation" name="designation"
-                                placeholder="Designation" />
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label class="form-label">Batch</label>
-                            <input type="text" class="form-control" id="modalEditUserBatch" name="batch"
-                                placeholder="Batch" />
+                            <label class="form-label">End Date</label>
+                            <input type="date" class="form-control"name="end_date" placeholder="End Date"
+                                id="modalEditEventEndDate" />
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label">Image</label>
-                            <input type="file" class="form-control" id="modalEditUserImage" name="image"
-                                placeholder="Image" />
+                            <input type="file" class="form-control" name="image" placeholder="Image" />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-control" name="description" placeholder="Description" style="resize: none;" rows="5"
+                                id="modalEditEventDescription">
+                            </textarea>
                         </div>
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
@@ -156,24 +150,24 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            getMembers();
+            getEvents();
         });
 
         $(document).on('click', '.pagination a', function(event) {
             event.preventDefault();
             var page = $(this).attr('href').split('page=')[1];
-            getMembers(page);
+            getEvents(page);
         });
 
-        function getMembers(page = 1) {
+        function getEvents(page = 1) {
             var name = $('#search_value').val();
             var count = $('#page_count').val();
             var data = {
-                name: name,
+                title: name,
                 count: count
             };
             $.ajax({
-                url: "/members/all?page=" + page,
+                url: "/events/all?page=" + page,
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
@@ -181,14 +175,15 @@
                 dataType: 'html', // Specify the data type as 'html'
                 data: data,
                 success: function(response) {
-                    $('#members_table').html(response);
+                    $('#events_table').html(response);
                     $('.pagination a').attr("disabled",
-                    false); // Corrected the attribute name and removed unnecessary space
+                        false); // Corrected the attribute name and removed unnecessary space
+                    $('#addEventForm').trigger("reset");
                 }
             });
         }
 
-        function deleteMember(id) {
+        function deleteEvent(id) {
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -200,13 +195,13 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: '/members/' + id + '/delete',
+                        url: '/events/' + id + '/delete',
                         type: 'DELETE',
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                         success: function(response) {
-                            getMembers();
+                            getEvents();
                             Swal.fire(
                                 'Deleted!',
                                 'Your file has been deleted.',
@@ -218,21 +213,31 @@
             });
         }
 
-        function editMember(id) {
+        function editEvent(id) {
             $.ajax({
-                url: '/members/' + id + '/get',
+                url: '/events/' + id + '/get',
                 type: 'GET',
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 success: function(response) {
-                    $('#modalEditUserId').val(response.id);
-                    $('#modalEditUserFirstName').val(response.name);
-                    $('#modalEditUserEmail').val(response.email);
-                    $('#modalEditUserDesignation').val(response.designation);
-                    $('#modalEditUserBatch').val(response.batch);
-                    $('#editMemberForm').attr('action', '/members/' + response.id + '/update');
-                    $('#editMemberModal').modal('show');
+                    $('#modalEditEventId').val(response.id);
+                    $('#modalEditEventTitle').val(response.title);
+
+                    // Convert date strings to JavaScript Date objects
+                    var startDate = new Date(response.start_date);
+                    var endDate = new Date(response.end_date);
+
+                    // Format the dates as strings in 'YYYY-MM-DD' format
+                    var formattedStartDate = startDate.toISOString().split('T')[0];
+                    var formattedEndDate = endDate.toISOString().split('T')[0];
+
+                    $('#modalEditEventStartDate').val(formattedStartDate);
+                    $('#modalEditEventEndDate').val(formattedEndDate);
+
+                    $('#modalEditEventDescription').val(response.description);
+                    $('#editEventForm').attr('action', '/events/' + response.id + '/update');
+                    $('#editEventModal').modal('show');
                 }
             });
         }

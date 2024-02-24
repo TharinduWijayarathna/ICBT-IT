@@ -2,66 +2,68 @@
 
 namespace App\Http\Controllers\AdminArea;
 
+use App\Models\Event;
 use App\Models\Image;
-use App\Models\Member;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class MemberController extends AuthController
+class EventController extends AuthController
 {
     public function index()
     {
-        return view('admin.pages.members.index');
+        return view('admin.pages.events.index');
     }
 
     public function all(Request $request)
     {
-        $response['members'] = Member::getByFilter($request->all());
-        return view('admin.pages.members.components.table', $response);
+        $response['events'] = Event::getByFilter($request->all());
+        return view('admin.pages.events.components.table', $response);
     }
 
     public function get($id)
     {
-        $response = Member::find($id);
+        $response = Event::find($id);
         return $response;
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:members,email',
-            'designation' => 'required',
-            'batch' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $extension = $request->file('image')->extension();
         $imageName = time() . '.' . $request->file('image')->extension();
-        $request->file('image')->move(public_path('member_images'), $imageName);
+        $request->file('image')->move(public_path('event_images'), $imageName);
 
         $image = Image::create([
-            'path' => 'member_images/' . $imageName,
+            'path' => 'event_images/' . $imageName,
             'name' => $imageName,
             'extension' => $extension,
         ]);
 
         $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'designation' => $request->designation,
-            'batch' => $request->batch,
+            'title' => $request->title,
+            'description' => $request->description,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
             'image_id' => $image->id,
+            'user_id' => Auth::user()->id,
         ];
 
-        Member::create($data);
-        return redirect()->route('members');
+        Event::create($data);
+        return redirect()->route('events');
     }
 
     public function delete($id)
     {
-        $member = Member::find($id);
+        $event = Event::find($id);
 
-        $image = Image::find($member->image_id);
+        $image = Image::find($event->image_id);
         if ($image) {
             $imagePath = public_path($image->path);
             if (file_exists($imagePath)) {
@@ -70,27 +72,28 @@ class MemberController extends AuthController
             $image->delete();
         }
 
-        $member->delete();
+        $event->delete();
 
         return true;
     }
 
     public function update(Request $request, $id)
     {
-        $member = Member::find($id);
+        $event = Event::find($id);
 
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:members,email,' . $member->id,
-            'designation' => 'required',
-            'batch' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'designation' => $request->designation,
-            'batch' => $request->batch,
+            'title' => $request->title,
+            'description' => $request->description,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
         ];
 
         if ($request->hasFile('image')) {
@@ -98,7 +101,7 @@ class MemberController extends AuthController
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
-            $image = Image::find($member->image_id);
+            $image = Image::find($event->image_id);
             if (isset($image)) {
                 $imagePath = public_path($image->path);
                 if (file_exists($imagePath)) {
@@ -109,10 +112,10 @@ class MemberController extends AuthController
 
             $extension = $request->file('image')->extension();
             $imageName = time() . '.' . $request->file('image')->extension();
-            $request->file('image')->move(public_path('member_images'), $imageName);
+            $request->file('image')->move(public_path('event_images'), $imageName);
 
             $image = Image::create([
-                'path' => 'member_images/' . $imageName,
+                'path' => 'event_images/' . $imageName,
                 'name' => $imageName,
                 'extension' => $extension,
             ]);
@@ -120,7 +123,7 @@ class MemberController extends AuthController
             $data['image_id'] = $image->id;
         }
 
-        $member->update($data);
-        return redirect()->route('members');
+        $event->update($data);
+        return redirect()->route('events');
     }
 }

@@ -3,65 +3,63 @@
 namespace App\Http\Controllers\AdminArea;
 
 use App\Models\Image;
-use App\Models\Member;
+use App\Models\BlogPost;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class MemberController extends AuthController
+class BlogPostController extends AuthController
 {
     public function index()
     {
-        return view('admin.pages.members.index');
+        return view('admin.pages.posts.index');
     }
 
     public function all(Request $request)
     {
-        $response['members'] = Member::getByFilter($request->all());
-        return view('admin.pages.members.components.table', $response);
+        $response['posts'] = BlogPost::getByFilter($request->all());
+        return view('admin.pages.posts.components.table', $response);
     }
 
     public function get($id)
     {
-        $response = Member::find($id);
+        $response = BlogPost::find($id);
         return $response;
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:members,email',
-            'designation' => 'required',
-            'batch' => 'required',
+            'title' => 'required',
+            'content' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $extension = $request->file('image')->extension();
         $imageName = time() . '.' . $request->file('image')->extension();
-        $request->file('image')->move(public_path('member_images'), $imageName);
+        $request->file('image')->move(public_path('post_images'), $imageName);
 
         $image = Image::create([
-            'path' => 'member_images/' . $imageName,
+            'path' => 'post_images/' . $imageName,
             'name' => $imageName,
             'extension' => $extension,
         ]);
 
         $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'designation' => $request->designation,
-            'batch' => $request->batch,
+            'title' => $request->title,
+            'content' => $request->content,
+            'user_id' => Auth::user()->id,
             'image_id' => $image->id,
         ];
 
-        Member::create($data);
-        return redirect()->route('members');
+        BlogPost::create($data);
+        return redirect()->route('posts');
     }
 
     public function delete($id)
     {
-        $member = Member::find($id);
+        $post = BlogPost::find($id);
 
-        $image = Image::find($member->image_id);
+        $image = Image::find($post->image_id);
         if ($image) {
             $imagePath = public_path($image->path);
             if (file_exists($imagePath)) {
@@ -70,27 +68,23 @@ class MemberController extends AuthController
             $image->delete();
         }
 
-        $member->delete();
+        $post->delete();
 
         return true;
     }
 
     public function update(Request $request, $id)
     {
-        $member = Member::find($id);
+        $post = BlogPost::find($id);
 
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:members,email,' . $member->id,
-            'designation' => 'required',
-            'batch' => 'required',
+            'title' => 'required',
+            'content' => 'required',
         ]);
 
         $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'designation' => $request->designation,
-            'batch' => $request->batch,
+            'title' => $request->title,
+            'content' => $request->content,
         ];
 
         if ($request->hasFile('image')) {
@@ -98,7 +92,7 @@ class MemberController extends AuthController
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
-            $image = Image::find($member->image_id);
+            $image = Image::find($post->image_id);
             if (isset($image)) {
                 $imagePath = public_path($image->path);
                 if (file_exists($imagePath)) {
@@ -109,10 +103,10 @@ class MemberController extends AuthController
 
             $extension = $request->file('image')->extension();
             $imageName = time() . '.' . $request->file('image')->extension();
-            $request->file('image')->move(public_path('member_images'), $imageName);
+            $request->file('image')->move(public_path('post_images'), $imageName);
 
             $image = Image::create([
-                'path' => 'member_images/' . $imageName,
+                'path' => 'post_images/' . $imageName,
                 'name' => $imageName,
                 'extension' => $extension,
             ]);
@@ -120,7 +114,7 @@ class MemberController extends AuthController
             $data['image_id'] = $image->id;
         }
 
-        $member->update($data);
-        return redirect()->route('members');
+        $post->update($data);
+        return redirect()->route('posts');
     }
 }
