@@ -28,4 +28,31 @@ class Event extends Model
     {
         return $this->hasOne(Image::class, 'id', 'image_id');
     }
+
+    public static function getByFilter($filters)
+    {
+        $events = Event::select('*')->orderBy('id', 'desc');
+
+        if (isset($filters['title'])) {
+            $events->where('title', 'like', '%' . $filters['title'] . '%');
+        }
+
+        if (isset($filters['start_date'])) {
+            $events->where('start_date', '>=', $filters['start_date']);
+        }
+
+        if (isset($filters['end_date'])) {
+            $events->where('end_date', '<=', $filters['end_date']);
+        }
+
+        if(isset($filters['user_id'])){
+            $events->where('user_id', $filters['user_id']);
+        }
+
+        if (isset($filters['count'])) {
+            return $events->orderBy('id', 'desc')->paginate($filters['count']);
+        } else {
+            return $events->orderBy('id', 'desc')->paginate(20);
+        }
+    }
 }

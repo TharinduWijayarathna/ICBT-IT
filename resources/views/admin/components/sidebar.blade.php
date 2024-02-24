@@ -48,10 +48,16 @@
                 <div>Members</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="javascript:void(0)" class="menu-link">
+        <li class="menu-item {{ in_array(Route::currentRouteName(), ['events']) ? 'active' : '' }}">
+            <a href="{{ route('events') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-calendar"></i>
-                <div>Upcoming Events</div>
+                <div>Events</div>
+            </a>
+        </li>
+        <li class="menu-item {{ in_array(Route::currentRouteName(), ['posts']) ? 'active' : '' }}">
+            <a href="{{ route('posts') }}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-pencil"></i>
+                <div>Blog & Posts</div>
             </a>
         </li>
     </ul>
