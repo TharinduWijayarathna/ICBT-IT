@@ -40,13 +40,13 @@ Route::prefix('events')->group(function () {
     Route::delete('/{id}/delete',[EventController::class, 'delete'])->name('events.delete');
 });
 
-Route::prefix('blog_posts')->group(function () {
-    Route::get('/',[BlogPostController::class, 'index'])->name('blog_posts');
-    Route::get('/{id}/get',[BlogPostController::class, 'get'])->name('blog_posts.get');
-    Route::post('/store',[BlogPostController::class, 'store'])->name('blog_posts.store');
-    Route::get('/all',[BlogPostController::class, 'all'])->name('blog_posts.all');
-    Route::post('/{id}/update',[BlogPostController::class, 'update'])->name('blog_posts.update');
-    Route::delete('/{id}/delete',[BlogPostController::class, 'delete'])->name('blog_posts.delete');
+Route::prefix('posts')->group(function () {
+    Route::get('/',[BlogPostController::class, 'index'])->name('posts');
+    Route::get('/{id}/get',[BlogPostController::class, 'get'])->name('posts.get');
+    Route::post('/store',[BlogPostController::class, 'store'])->name('posts.store');
+    Route::get('/all',[BlogPostController::class, 'all'])->name('posts.all');
+    Route::post('/{id}/update',[BlogPostController::class, 'update'])->name('posts.update');
+    Route::delete('/{id}/delete',[BlogPostController::class, 'delete'])->name('posts.delete');
 });
 
 require __DIR__.'/auth.php';
