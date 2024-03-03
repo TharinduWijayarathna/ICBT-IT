@@ -17,12 +17,12 @@
 
     // Set default theme to 'light'.
     // Possible options: 'dark' or system color mode (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-    return 'light'
+    return 'dark'
   }
 
   const setTheme = theme => {
-    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-bs-theme', 'dark')
+    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      document.documentElement.setAttribute('data-bs-theme', 'light')
     } else {
       document.documentElement.setAttribute('data-bs-theme', theme)
     }
@@ -39,16 +39,16 @@
     
     const themeSwitcherCheck = themeSwitcher.querySelector('input[type="checkbox"]')
 
-    if (theme === 'dark') {
+    if (theme === 'light') {
       themeSwitcherCheck.checked = 'checked'
     } else {
       themeSwitcherCheck.checked = false
     }
   }
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
     const storedTheme = getStoredTheme()
-    if (storedTheme !== 'light' && storedTheme !== 'dark') {
+    if (storedTheme !== 'light' && storedTheme !== 'light') {
       setTheme(getPreferredTheme())
     }
   })
@@ -59,7 +59,7 @@
     document.querySelectorAll('[data-bs-toggle="mode"]')
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
-          const theme = toggle.querySelector('input[type="checkbox"]').checked === true ? 'dark' : 'light'
+          const theme = toggle.querySelector('input[type="checkbox"]').checked === true ? 'light' : 'dark'
           setStoredTheme(theme)
           setTheme(theme)
           showActiveTheme(theme, true)
