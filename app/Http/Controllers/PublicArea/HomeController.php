@@ -12,17 +12,17 @@ class HomeController extends Controller
         return view('public.pages.home.index');
     }
 
-    public function members()
+    public function societyMembers()
     {
         return view('public.pages.home.members');
     }
 
-    public function events()
+    public function societyEvents()
     {
         return view('public.pages.home.events');
     }
 
-    public function blogs()
+    public function societyBlogs()
     {
         return view('public.pages.home.blogs');
     }

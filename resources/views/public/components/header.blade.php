@@ -34,13 +34,13 @@
                       <a class="nav-link" href="{{ route('home') }}">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ route('home.members') }}">Members</a>
+                      <a class="nav-link" href="{{ route('society.members') }}">Members</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ route('home.events') }}">Events</a>
+                      <a class="nav-link" href="{{ route('society.events') }}">Events</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ route('home.blogs') }}">Blogs</a>
+                      <a class="nav-link" href="{{ route('society.blogs') }}">Blogs</a>
                   </li>
               </ul>
               <div class="d-sm-none p-3 mt-n3">
