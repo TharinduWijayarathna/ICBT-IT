@@ -11,4 +11,19 @@ class HomeController extends Controller
     {
         return view('public.pages.home.index');
     }
+
+    public function members()
+    {
+        return view('public.pages.home.members');
+    }
+
+    public function events()
+    {
+        return view('public.pages.home.events');
+    }
+
+    public function blogs()
+    {
+        return view('public.pages.home.blogs');
+    }
 }

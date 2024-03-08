@@ -20,6 +20,10 @@ use App\Http\Controllers\AdminArea\HomeController as AdminAreaHomeController;
 */
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
+Route::get('/public/members',[HomeController::class, 'members'])->name('home.members');
+Route::get('/public/events',[HomeController::class, 'events'])->name('home.events');
+Route::get('/public/blogs',[HomeController::class, 'blogs'])->name('home.blogs');
+
 Route::get('/dashboard',[AdminAreaHomeController::class, 'index'])->name('dashboard');
 
 Route::prefix('members')->group(function () {
