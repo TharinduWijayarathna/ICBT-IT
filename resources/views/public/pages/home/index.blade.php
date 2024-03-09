@@ -67,30 +67,32 @@
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-2 pb-3 mb-4"><span class="fw-normal">Full servises</span> marketing agency</h1>
+                    <h1 class="display-2 pb-3 mb-4">ICBT IT Society</h1>
                     <div class="row row-cols-3">
                         <div class="col">
                             <i class="ai-bulb-alt d-block fs-1 text-dark mb-2 pb-1"></i>
-                            <p class="mb-0">Individual approach to the brand</p>
+                            <p class="mb-0">Crafting Innovative Solutions for ICBT IT Community</p>
                         </div>
                         <div class="col">
                             <i class="ai-rocket d-block fs-2 text-dark mb-3"></i>
-                            <p class="mb-0">We guarantee the result after a month</p>
+                            <p class="mb-0">Ensuring Rapid Progress and Impactful Outcomes</p>
                         </div>
                         <div class="col">
                             <i class="ai-circle-check-filled d-block fs-3 text-dark mb-3"></i>
-                            <p class="mb-0">Completing tasks exactly on time</p>
+                            <p class="mb-0">Punctual Execution of IT Initiatives and Milestones</p>
                         </div>
                     </div>
                     <div class="d-sm-flex justify-content-center justify-content-lg-start pt-5 mt-lg-2">
-                        <a class="btn btn-lg btn-primary w-100 w-sm-auto mb-2 mb-sm-0 me-sm-1" href="#">Get in
-                            touch</a>
+                        <a class="btn btn-lg btn-primary w-100 w-sm-auto mb-2 mb-sm-0 me-sm-1" href="#">Join ICBT IT
+                            Society</a>
                         <a class="btn btn-lg btn-link" href="#">
-                            Our case studies
+                            Explore Our IT Features
                             <i class="ai-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -100,24 +102,24 @@
     <section class="container py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
         <div class="row align-items-center py-1 py-sm-3 py-md-4 my-lg-2">
             <div class="col-lg-4 offset-xl-1">
-                <h2 class="h1 text-center text-lg-start pb-3 pb-lg-1">Our servises</h2>
+                <h2 class="h1 text-center text-lg-start pb-3 pb-lg-1">Our Main Responsibilities</h2>
 
                 <!-- Show on screens > 992px -->
                 <ul class="list-unstyled d-none d-lg-block pb-3 mb-3 mb-lg-4">
                     <li class="d-flex pt-2">
                         <i class="ai-check-alt fs-4 text-primary mt-n1 me-2"></i>
-                        Individual approach to the brand
+                        Strategic Planning and Implementation
                     </li>
                     <li class="d-flex pt-2">
                         <i class="ai-check-alt fs-4 text-primary mt-n1 me-2"></i>
-                        We guarantee the result after a month
+                        Ensuring Efficient IT Operations
                     </li>
                     <li class="d-flex pt-2">
                         <i class="ai-check-alt fs-4 text-primary mt-n1 me-2"></i>
-                        Completing tasks exactly on time
+                        Collaborating for Technological Advancements
                     </li>
                 </ul>
-                <a class="btn btn-primary d-none d-lg-inline-flex" href="#">See all servises</a>
+                <a class="btn btn-primary d-none d-lg-inline-flex" href="#">See all responsibilities</a>
             </div>
 
             <div class="col-lg-8 col-xl-7 col-xxl-6">
@@ -126,17 +128,17 @@
                         <div class="card border-0 bg-primary bg-opacity-10">
                             <div class="card-body">
                                 <i class="ai-search-settings fs-1 text-primary d-block mb-3"></i>
-                                <h3 class="h4">SEO Website Audit</h3>
-                                <p class="fs-sm">Consectetur adipiscing elit proin volutpat mollis egestas nam in luctus
-                                    facilisis ultrices llentesque volutpat ligula est dignissim.</p>
+                                <h3 class="h4">Strategic Planning</h3>
+                                <p class="fs-sm">Developing and executing strategic plans to meet IT objectives and
+                                    organizational goals.</p>
                             </div>
                         </div>
                         <div class="card border-0 bg-info bg-opacity-10 mt-4">
                             <div class="card-body">
                                 <i class="ai-bulb-alt fs-1 text-info d-block mb-3"></i>
-                                <h3 class="h4">Content Marketing</h3>
-                                <p class="fs-sm">Morbi et massa fames ac lerisque sit commodo dignissim faucibus vel
-                                    quisque proin lectus orbi et massa fames ac massa.</p>
+                                <h3 class="h4">Efficient Operations</h3>
+                                <p class="fs-sm">Ensuring the smooth and efficient operation of IT systems and
+                                    infrastructure.</p>
                             </div>
                         </div>
                     </div>
@@ -144,17 +146,17 @@
                         <div class="card border-0 bg-warning bg-opacity-10 mt-4 mt-sm-0 mt-lg-4">
                             <div class="card-body">
                                 <i class="ai-mail-filled fs-1 text-warning d-block mb-3"></i>
-                                <h3 class="h4">Email Marketing</h3>
-                                <p class="fs-sm">Sapiener ultrices egestas at faucibus eu diam velit diam id amet nibh
-                                    quam rutrum diam diam natoque scelerisque viverra.</p>
+                                <h3 class="h4">Technological Collaboration</h3>
+                                <p class="fs-sm">Collaborating with stakeholders and teams to implement and adopt new
+                                    technologies.</p>
                             </div>
                         </div>
                         <div class="card border-0 bg-danger bg-opacity-10 mt-4">
                             <div class="card-body">
                                 <i class="ai-telegram fs-2 text-danger d-block mb-3"></i>
-                                <h3 class="h4">Social Networks</h3>
-                                <p class="fs-sm">Pharetra in morbi quis is massa maecenas arcu vulputate pulvinar elit non
-                                    nullage a, duis tortor mi massa ipsum in eu eu eget libero.</p>
+                                <h3 class="h4">Innovation and Improvement</h3>
+                                <p class="fs-sm">Driving innovation and continuous improvement in IT processes and
+                                    solutions.</p>
                             </div>
                         </div>
                     </div>
@@ -162,197 +164,11 @@
 
                 <!-- Show button on screens < 992px -->
                 <div class="d-lg-none text-center pt-3 mt-3 mt-sm-4">
-                    <a class="btn btn-primary" href="#">See all servises</a>
+                    <a class="btn btn-primary" href="#">See all responsibilities</a>
                 </div>
             </div>
         </div>
     </section>
-
-
-    <!-- Tools -->
-    <section class="container">
-        <div class="bg-primary bg-opacity-10 rounded-5 py-5 px-4 p-sm-5">
-            <div class="d-lg-flex align-items-center g-0 py-2 py-sm-3 py-md-4 p-xl-5">
-                <div class="order-lg-2 text-center text-lg-start ps-lg-5 mx-auto me-lg-0">
-                    <h2 class="h1 mb-4">The tools <br class="d-none d-lg-inline">we work with</h2>
-                    <p class="pb-3 mb-3 mb-lg-4">Morbi et massa fames ac scelerisque sit commodo dignissim faucibus vel
-                        quisque proin lectus. Morbi et massa fames ac scelerisque sit commodo dignissim.</p><a
-                        class="btn btn-primary d-none d-lg-inline-flex" href="#">See all tools</a>
-                </div>
-                <div class="order-lg-1 w-100 mx-auto mx-lg-0" style="max-width: 558px;">
-                    <div class="row row-cols-3 g-3 g-sm-4 g-lg-3 g-xl-4">
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
-                                data-aos-delay="300">
-                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/bing.svg') }}"
-                                    alt="Bing">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
-                                data-aos-delay="500">
-                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/facebook.svg') }}"
-                                    alt="Facebook">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
-                                data-aos-delay="200">
-                                <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/microsoft-dark.svg') }}"
-                                    alt="Facebook">
-                                <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/microsoft-light.svg') }}"
-                                    alt="Facebook">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
-                                data-aos-delay="800">
-                                <img src="{{ asset('assets/web/img/landing/marketing-agency/tools/google.svg') }}"
-                                    alt="Google">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back">
-                                <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-ads-dark.svg') }}"
-                                    alt="Google Ads">
-                                <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-ads-light.svg') }}"
-                                    alt="Google Ads">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
-                                data-aos-delay="600">
-                                <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/admitad-dark.svg') }}"
-                                    alt="Admitad">
-                                <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/admitad-light.svg') }}"
-                                    alt="Admitad">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
-                                data-aos-delay="400">
-                                <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-analytics-dark.svg') }}"
-                                    alt="Google Analytics">
-                                <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/google-analytics-light.svg') }}"
-                                    alt="Google Analytics">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
-                                data-aos-delay="700">
-                                <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/instagram-dark.svg') }}"
-                                    alt="Instagram">
-                                <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/instagram-light.svg') }}"
-                                    alt="Instagram">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3" data-aos="zoom-in" data-aos-easing="ease-out-back"
-                                data-aos-delay="100">
-                                <img class="d-dark-mode-none"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/tiktok-dark.svg') }}"
-                                    alt="TikTok">
-                                <img class="d-none d-dark-mode-block"
-                                    src="{{ asset('assets/web/img/landing/marketing-agency/tools/tiktok-light.svg') }}"
-                                    alt="TikTok">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-lg-none text-center pt-4 mt-2 mt-md-3" data-aos="zoom-in"
-                        data-aos-easing="ease-out-back" data-aos-delay="900">
-                        <a class="btn btn-primary" href="#">See all tools</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Benefits -->
-    <section class="container py-5 my-lg-3 my-xl-4 my-xxl-5">
-        <h2 class="h1 text-center pb-3 pt-2 pt-sm-3 pt-md-4 pt-lg-5 mt-md-3 mt-lg-0 mb-3 mb-lg-4">Our benefits</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 gy-4 gy-sm-5 gx-4 pb-3 pb-md-4 pb-lg-5 mb-md-3 mb-lg-0">
-
-            <!-- Item -->
-            <div class="col text-center">
-                <div class="ratio ratio-1x1 position-relative mx-auto mb-3 mb-sm-4" style="width: 68px;">
-                    <i
-                        class="ai-search-settings text-primary fs-1 d-flex align-items-center justify-content-center position-absolute start-0"></i>
-                    <svg class="position-absolute top-0 start-0 text-primary" width="68" height="68"
-                        viewBox="0 0 68 68" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M56.0059 60.5579C44.1549 78.9787 18.0053 58.9081 6.41191 46.5701C-2.92817 35.5074 -2.81987 12.1818 11.7792 3.74605C30.0281 -6.79858 48.0623 7.40439 59.8703 15.7971C71.6784 24.1897 70.8197 37.5319 56.0059 60.5579Z"
-                            fill-opacity="0.1"></path>
-                    </svg>
-                </div>
-                <h3 class="h4 pb-2 mb-1">Online support</h3>
-                <p class="fs-sm mb-0">Pharetra morbi quis is massa maecenas vulputate elit non nullage a duis tortor mi
-                    massa pharetra.</p>
-            </div>
-
-            <!-- Item -->
-            <div class="col text-center">
-                <div class="ratio ratio-1x1 position-relative mx-auto mb-3 mb-sm-4" style="width: 68px;">
-                    <i
-                        class="ai-bulb-alt text-primary fs-1 d-flex align-items-center justify-content-center position-absolute start-0"></i>
-                    <svg class="position-absolute top-0 start-0 text-primary" width="68" height="68"
-                        viewBox="0 0 68 68" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M65.0556 29.2672C75.4219 46.3175 48.5577 59.7388 33.8299 64.3181C21.0447 67.5599 1.98006 58.174 0.888673 42.8524C-0.475555 23.7004 18.3473 14.5883 29.9289 8.26059C41.5104 1.93285 52.0978 7.9543 65.0556 29.2672Z"
-                            fill-opacity="0.1"></path>
-                    </svg>
-                </div>
-                <h3 class="h4 pb-2 mb-1">100% guarantee</h3>
-                <p class="fs-sm mb-0">Sapien ultrices egestas at faucibus eu diam velit diam id amet nibh quam rutrum diam
-                    diam natoque scelerisque.</p>
-            </div>
-
-            <!-- Item -->
-            <div class="col text-center">
-                <div class="ratio ratio-1x1 position-relative mx-auto mb-3 mb-sm-4" style="width: 68px;">
-                    <i
-                        class="ai-circle-check-filled text-primary fs-2 d-flex align-items-center justify-content-center position-absolute start-0"></i>
-                    <svg class="position-absolute top-0 start-0 text-primary" width="68" height="68"
-                        viewBox="0 0 68 68" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M6.61057 18.2783C10.8205 -1.22686 39.549 7.51899 53.3869 14.3301C64.8949 20.7749 72.2705 40.7038 62.5199 52.5725C50.3318 67.4085 30.4034 61.0689 17.6454 57.6914C4.88745 54.314 1.3482 42.6597 6.61057 18.2783Z"
-                            fill-opacity="0.1"></path>
-                    </svg>
-                </div>
-                <h3 class="h4 pb-2 mb-1">Work on time</h3>
-                <p class="fs-sm mb-0">Morbi et massa fames ac scelerisque sit commodo dignissim faucibus vel quisque proin
-                    lectus orbi et massa fames.</p>
-            </div>
-
-            <!-- Item -->
-            <div class="col text-center">
-                <div class="ratio ratio-1x1 position-relative mx-auto mb-3 mb-sm-4" style="width: 68px;">
-                    <i
-                        class="ai-rocket text-primary fs-2 d-flex align-items-center justify-content-center position-absolute start-0"></i>
-                    <svg class="position-absolute top-0 start-0 text-primary" width="68" height="68"
-                        viewBox="0 0 68 68" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M9.34481 53.5078C-7.24653 42.4218 11.4487 18.9206 22.8702 8.55583C33.0946 0.223307 54.3393 0.690942 61.7922 14.1221C71.1082 30.9111 57.886 47.1131 50.0546 57.7358C42.2233 68.3586 30.084 67.3653 9.34481 53.5078Z"
-                            fill-opacity="0.1"></path>
-                    </svg>
-                </div>
-                <h3 class="h4 pb-2 mb-1">Free consultation</h3>
-                <p class="fs-sm mb-0">Consectetur adipiscing elit proin volutpat mollis egestas nam luctus facilisis
-                    ultrices pellentesque volutpat ligula est.</p>
-            </div>
-        </div>
-    </section>
-
 
     <!-- About -->
     <section class="overflow-hidden pb-5 mb-lg-3 mb-xl-4 mb-xxl-5">
@@ -387,142 +203,6 @@
                 </div>
             </div>
 
-            <!-- Content -->
-            <div class="row pt-5 mt-md-4">
-                <div class="col-md-6 col-xxl-5 offset-xxl-1 mb-4 mb-md-0">
-                    <div class="text-center text-md-start pe-md-4 pe-xl-5 pe-xxl-0">
-                        <h2 class="h1 mb-sm-4">A team of specialists works for your business</h2>
-                        <p class="fs-lg mb-2 mb-sm-3 mb-xl-4 mx-auto mx-md-0" style="max-width: 475px;">Sapien ultrices
-                            egestas at faucibus on diam velit diam amet nibh in quam rutrum diam natoque scelerisque viverra
-                            pharetra quis massa maecenas vulputate.</p>
-                        <a class="btn btn-lg btn-link px-0" href="#">
-                            More about us
-                            <i class="ai-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-n3">
-                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-2 row-cols-lg-3 gy-md-2 gx-3">
-                        <div class="col">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-gray.svg') }}"
-                                        width="120" alt="Klinos">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-light.svg') }}"
-                                        width="120" alt="Klinos">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-gray.svg') }}"
-                                        width="147" alt="Starcraft">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-light.svg') }}"
-                                        width="147" alt="Starcraft">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/airbnb-gray.svg') }}"
-                                        width="121" alt="Airbnb">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/airbnb-light.svg') }}"
-                                        width="121" alt="Airbnb">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-gray.svg') }}"
-                                        width="132" alt="Alpine">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-light.svg') }}"
-                                        width="132" alt="Alpine">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/foster-gray.svg') }}"
-                                        width="132" alt="Foster">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/foster-light.svg') }}"
-                                        width="132" alt="Foster">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/champion-gray.svg') }}"
-                                        width="130" alt="Champion">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/champion-light.svg') }}"
-                                        width="130" alt="Champion">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-gray.svg') }}"
-                                        width="147" alt="Starcraft">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/starcraft-light.svg') }}"
-                                        width="147" alt="Starcraft">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-gray.svg') }}"
-                                        width="120" alt="Klinos">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/klinos-light.svg') }}"
-                                        width="120" alt="Klinos">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-none d-sm-block d-md-none d-lg-block">
-                            <div class="ratio ratio-21x9 position-relative mx-auto" style="max-width: 180px;">
-                                <div
-                                    class="d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 px-3">
-                                    <img class="d-block d-dark-mode-none"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-gray.svg') }}"
-                                        width="132" alt="Alpine">
-                                    <img class="d-none d-dark-mode-block"
-                                        src="{{ asset('assets/web/img/landing/saas-1/brands/alpine-light.svg') }}"
-                                        width="132" alt="Alpine">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -568,18 +248,16 @@
 
                             <!-- Item -->
                             <div class="binded-item active" id="author1">
-                                <img class="d-block rounded-circle mb-3"
-                                    src="{{ asset('assets/web/img/avatar/13.jpg') }}" width="86"
-                                    alt="Lilianna Bocouse">
+                                <img class="d-block rounded-circle mb-3" src="{{ asset('assets/web/img/avatar/13.jpg') }}"
+                                    width="86" alt="Lilianna Bocouse">
                                 <h4 class="mb-0">Lilianna Bocouse</h4>
                                 <p class="fs-lg text-body-secondary mb-0">Head of Marketing</p>
                             </div>
 
                             <!-- Item -->
                             <div class="binded-item" id="author2">
-                                <img class="d-block rounded-circle mb-3"
-                                    src="{{ asset('assets/web/img/avatar/14.jpg') }}" width="86"
-                                    alt="Darell Steward">
+                                <img class="d-block rounded-circle mb-3" src="{{ asset('assets/web/img/avatar/14.jpg') }}"
+                                    width="86" alt="Darell Steward">
                                 <h4 class="mb-0">Darell Steward</h4>
                                 <p class="fs-lg text-body-secondary mb-0">Project Manager</p>
                             </div>
@@ -735,92 +413,78 @@
         }'>
                         <div class="swiper-wrapper">
 
-                            <!-- Item -->
-                            <div class="swiper-slide pb-1" data-swiper-binded="#image1">
-                                <h3 class="h4">Growth of subscribers and sales on social networks for the eco shoe
-                                    brand</h3>
-                                <p class="pb-3 mb-3 mb-xl-4">Morbi et massa fames ac scelerisque sit commodo dignissim
-                                    faucibus vel quisque proin lectus. Morbi et massa fames ac scelerisque sit commodo
-                                    dignissim.</p>
+                            <!-- Event -->
+                            <div class="swiper-slide pb-1" data-swiper-binded="#eventImage1">
+                                <h3 class="h4">Tech Expo 2024</h3>
+                                <p class="pb-3 mb-3 mb-xl-4">Join us for an exciting Tech Expo showcasing the latest
+                                    innovations and technologies. Don't miss out on the opportunity to explore
+                                    groundbreaking advancements in the tech industry.</p>
                                 <div class="d-flex d-md-none d-lg-flex justify-content-between w-100 pb-4 pb-xl-5 mb-2 mb-sm-3 mb-xl-2"
-                                    style="max-width: 440px;">
+                                    style="max-width: 550px;">
                                     <div class="pe-4">
-                                        <div class="h2 mb-1">1000+</div>
-                                        <div class="fs-sm">leads for $ 2.1</div>
+                                        <div class="h6 mb-1">Date: March 15, 2024</div>
+                                        <div class="fs-sm">Time: 10:00 AM - 5:00 PM</div>
                                     </div>
                                     <div class="pe-4">
-                                        <div class="h2 mb-1">160%</div>
-                                        <div class="fs-sm">revenue increase</div>
-                                    </div>
-                                    <div>
-                                        <div class="h2 mb-1">12+</div>
-                                        <div class="fs-sm">sales channels</div>
+                                        <div class="h6 mb-1">Location: ICBT Kandy Campus</div>
+                                        <div class="fs-sm">Free Entry</div>
                                     </div>
                                 </div>
                                 <div class="d-sm-flex">
                                     <a class="btn btn-primary w-100 w-sm-auto mb-3 mb-sm-0 me-sm-3 me-xl-4"
-                                        href="#">Read a full story</a>
+                                        href="#">Learn More</a>
                                     <a class="btn btn-outline-primary w-100 w-sm-auto d-md-none d-lg-inline-flex"
-                                        href="#">All case studies</a>
+                                        href="#">View All Events</a>
                                 </div>
                             </div>
 
-                            <!-- Item -->
-                            <div class="swiper-slide pb-1" data-swiper-binded="#image2">
-                                <h3 class="h4">Business strategy for a brand of vintage bags and accessories</h3>
-                                <p class="pb-3 mb-3 mb-xl-4">Pharetra in morbi quis is massa maecenas arcu vulputate
-                                    pulvinar elit non nullage a, duis tortor mi massa ipsum in eu eu eget libero pulvinar
-                                    elit vulputate scelerisque.</p>
+                            <!-- Event -->
+                            <div class="swiper-slide pb-1" data-swiper-binded="#eventImage2">
+                                <h3 class="h4">Career Fair 2024</h3>
+                                <p class="pb-3 mb-3 mb-xl-4">Explore career opportunities and connect with leading
+                                    companies at our Career Fair 2024. This event is designed to help you discover potential
+                                    career paths and network with industry professionals.</p>
                                 <div class="d-flex d-md-none d-lg-flex justify-content-between w-100 pb-4 pb-xl-5 mb-2 mb-sm-3 mb-xl-2"
-                                    style="max-width: 440px;">
+                                    style="max-width: 550px;">
                                     <div class="pe-4">
-                                        <div class="h2 mb-1">1200+</div>
-                                        <div class="fs-sm">leads for $ 2.1</div>
+                                        <div class="h6 mb-1">Date: April 20, 2024</div>
+                                        <div class="fs-sm">Time: 9:00 AM - 4:00 PM</div>
                                     </div>
                                     <div class="pe-4">
-                                        <div class="h2 mb-1">130%</div>
-                                        <div class="fs-sm">revenue increase</div>
-                                    </div>
-                                    <div>
-                                        <div class="h2 mb-1">14+</div>
-                                        <div class="fs-sm">sales channels</div>
+                                        <div class="h6 mb-1">Location: ICBT Kandy Campus</div>
+                                        <div class="fs-sm">Open to All Students</div>
                                     </div>
                                 </div>
                                 <div class="d-sm-flex">
                                     <a class="btn btn-primary w-100 w-sm-auto mb-3 mb-sm-0 me-sm-3 me-xl-4"
-                                        href="#">Read a full story</a>
+                                        href="#">Learn More</a>
                                     <a class="btn btn-outline-primary w-100 w-sm-auto d-md-none d-lg-inline-flex"
-                                        href="#">All case studies</a>
+                                        href="#">View All Events</a>
                                 </div>
                             </div>
 
-                            <!-- Item -->
-                            <div class="swiper-slide pb-1" data-swiper-binded="#image3">
-                                <h3 class="h4">Growth of subscribers and sales on social networks for the eco cosmetics
-                                </h3>
-                                <p class="pb-3 mb-3 mb-xl-4">Sapien ultrices egestas at faucibus eu diam velit diam id amet
-                                    nibh quam rutrum diam fermentum diam natoque scelerisque viverra molestie fames pulvinar
-                                    elit.</p>
+                            <!-- Event -->
+                            <div class="swiper-slide pb-1" data-swiper-binded="#eventImage3">
+                                <h3 class="h4">Sports Festival 2024</h3>
+                                <p class="pb-3 mb-3 mb-xl-4">Get ready for a day filled with sports, fun, and excitement!
+                                    Our Sports Festival 2024 brings together students, faculty, and staff for a day of
+                                    friendly competition and team spirit. Don't miss out on the action!</p>
                                 <div class="d-flex d-md-none d-lg-flex justify-content-between w-100 pb-4 pb-xl-5 mb-2 mb-sm-3 mb-xl-2"
-                                    style="max-width: 440px;">
+                                    style="max-width: 550px;">
                                     <div class="pe-4">
-                                        <div class="h2 mb-1">900+</div>
-                                        <div class="fs-sm">leads for $ 2.1</div>
+                                        <div class="h6 mb-1">Date: May 25, 2024</div>
+                                        <div class="fs-sm">Time: 1:00 PM - 6:00 PM</div>
                                     </div>
                                     <div class="pe-4">
-                                        <div class="h2 mb-1">150%</div>
-                                        <div class="fs-sm">revenue increase</div>
-                                    </div>
-                                    <div>
-                                        <div class="h2 mb-1">10+</div>
-                                        <div class="fs-sm">sales channels</div>
+                                        <div class="h6 mb-1">Location: ICBT Kandy Campus Grounds</div>
+                                        <div class="fs-sm">Open to All Sports Enthusiasts</div>
                                     </div>
                                 </div>
                                 <div class="d-sm-flex">
                                     <a class="btn btn-primary w-100 w-sm-auto mb-3 mb-sm-0 me-sm-3 me-xl-4"
-                                        href="#">Read a full story</a>
+                                        href="#">Learn More</a>
                                     <a class="btn btn-outline-primary w-100 w-sm-auto d-md-none d-lg-inline-flex"
-                                        href="#">All case studies</a>
+                                        href="#">View All Events</a>
                                 </div>
                             </div>
                         </div>
@@ -854,17 +518,17 @@
                 </svg>
             </div>
         </div>
-        <div class="container-start pe-0">
+        <div class="container pe-0">
             <div class="swiper"
-                data-swiper-options='{
-      "slidesPerView": "auto",
-      "spaceBetween": 24,
-      "loop": true,
-      "navigation": {
-        "prevEl": "#prev-feature",
-        "nextEl": "#next-feature"
-      }
-    }'>
+                            data-swiper-options='{
+                "slidesPerView": "auto",
+                "spaceBetween": 24,
+                "loop": true,
+                "navigation": {
+                    "prevEl": "#prev-feature",
+                    "nextEl": "#next-feature"
+                }
+                }'>
                 <div class="swiper-wrapper">
 
                     <!-- Item -->
@@ -1103,96 +767,92 @@
     <!-- Resources (Blog) -->
     <section class="bg-primary bg-opacity-10 py-5">
         <div class="container py-sm-2 pt-md-3 py-lg-2 py-xl-4 py-xxl-5">
-            <h3 class="h1 text-center pt-2 pt-sm-3 pb-3 mb-3 mb-lg-4">Resources for you</h3>
+            <h3 class="h1 text-center pt-2 pt-sm-3 pb-3 mb-3 mb-lg-4">Recent Blog Posts</h3>
 
             <!-- Swiper slider -->
             <div class="swiper"
                 data-swiper-options='
-      {
-        "spaceBetween": 24,
-        "pagination": {
-          "el": ".swiper-pagination",
-          "clickable": true
-        },
-        "breakpoints": {
-          "576": { "slidesPerView": 2 },
-          "992": { "slidesPerView": 3 }
-        }
-      }
-    '>
+                {
+                    "spaceBetween": 24,
+                    "pagination": {
+                    "el": ".swiper-pagination",
+                    "clickable": true
+                    },
+                    "breakpoints": {
+                    "576": { "slidesPerView": 2 },
+                    "992": { "slidesPerView": 3 }
+                    }
+                }
+                '>
                 <div class="swiper-wrapper">
 
-                    <!-- Article -->
+                    <!-- Blog Post -->
                     <article class="swiper-slide h-auto">
                         <div class="card border-0 h-100">
                             <div class="card-body pb-4">
                                 <div class="d-flex align-items-center mb-4 mt-n1">
-                                    <span class="fs-sm text-body-secondary">August 13, 2022</span>
+                                    <span class="fs-sm text-body-secondary">March 3, 2024</span>
                                     <span class="fs-xs opacity-20 mx-3">|</span>
-                                    <a class="badge text-nav fs-xs border" href="#">Inspiration</a>
+                                    <a class="badge text-nav fs-xs border" href="#">Technology</a>
                                 </div>
                                 <h3 class="h4 card-title">
-                                    <a href="#">Promotion of an online store from scratch, first sales</a>
+                                    <a href="#">The Future of Artificial Intelligence: Trends and Innovations</a>
                                 </h3>
-                                <p class="card-text">Sapien ultrices egestas at faucibus eu diam velit diam id amet nibh
-                                    quam rutrum diam fermentum diam natoque scelerisque viverra molestie fames...</p>
+                                <p class="card-text">Explore the latest trends and innovations in artificial intelligence that are shaping the future. Discover how AI is influencing various industries and what to expect in the coming years.</p>
                             </div>
                             <div class="card-footer pt-3">
                                 <a class="d-flex align-items-center text-decoration-none pb-2" href="#">
                                     <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/10.jpg') }}"
                                         width="48" alt="Post author">
-                                    <h6 class="ps-3 mb-0">Guy Hawkins</h6>
+                                    <h6 class="ps-3 mb-0">Alice Bennett</h6>
                                 </a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Article -->
+                    <!-- Blog Post -->
                     <article class="swiper-slide h-auto">
                         <div class="card border-0 h-100">
                             <div class="card-body pb-4">
                                 <div class="d-flex align-items-center mb-4 mt-n1">
-                                    <span class="fs-sm text-body-secondary">July 25, 2022</span>
+                                    <span class="fs-sm text-body-secondary">February 18, 2024</span>
                                     <span class="fs-xs opacity-20 mx-3">|</span>
-                                    <a class="badge text-nav fs-xs border" href="#">Inspiration</a>
+                                    <a class="badge text-nav fs-xs border" href="#">Business</a>
                                 </div>
                                 <h3 class="h4 card-title">
-                                    <a href="#">Business strategy for a brand of vintage bags</a>
+                                    <a href="#">Strategies for Effective Remote Team Collaboration</a>
                                 </h3>
-                                <p class="card-text">Pharetra in morbi quis is massa maecenas arcu vulputate pulvinar elit
-                                    non nullage a, duis tortor mi massa ipsum in eu eu eget libero pulvinar elit
-                                    vulputate...</p>
+                                <p class="card-text">In the era of remote work, learn effective strategies to enhance collaboration within your remote team. Discover tools, communication tips, and best practices for successful remote teamwork.</p>
                             </div>
                             <div class="card-footer pt-3">
                                 <a class="d-flex align-items-center text-decoration-none pb-2" href="#">
                                     <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/07.jpg') }}"
                                         width="48" alt="Post author">
-                                    <h6 class="ps-3 mb-0">Cody Fisher</h6>
+                                    <h6 class="ps-3 mb-0">John Turner</h6>
                                 </a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Article -->
+                    <!-- Blog Post -->
                     <article class="swiper-slide h-auto">
                         <div class="card border-0 h-100">
                             <div class="card-body pb-4">
                                 <div class="d-flex align-items-center mb-4 mt-n1">
-                                    <span class="fs-sm text-body-secondary">July 08, 2022</span>
+                                    <span class="fs-sm text-body-secondary">February 5, 2024</span>
                                     <span class="fs-xs opacity-20 mx-3">|</span>
-                                    <a class="badge text-nav fs-xs border" href="#">Inspiration</a>
+                                    <a class="badge text-nav fs-xs border" href="#">Marketing</a>
                                 </div>
                                 <h3 class="h4 card-title">
-                                    <a href="#">Sales on social networks for the eco cosmetics</a>
+                                    <a href="#">The Power of Content Marketing: Strategies for Success</a>
                                 </h3>
-                                <p class="card-text">Morbi et massa fames ac scelerisque sit commodo dignissim faucibus vel
-                                    quisque proin lectus et massa fames ac scelerisque sit commodo dignissim...</p>
+                                <p class="card-text">Explore the impact of content marketing and discover effective strategies to create compelling content. Learn how to engage your audience, build brand awareness, and drive business growth.</p>
                             </div>
                             <div class="card-footer pt-3">
                                 <a class="d-flex align-items-center text-decoration-none pb-2" href="#">
                                     <img class="rounded-circle" src="{{ asset('assets/web/img/avatar/09.jpg') }}"
                                         width="48" alt="Post author">
-                                    <h6 class="ps-3 mb-0">Jane Cooper</h6>
+                                    <h6 class="ps-3 mb-0">Emily Parker</h6>
                                 </a>
                             </div>
                         </div>
@@ -1205,89 +865,9 @@
 
             <!-- Read more button -->
             <div class="text-center pt-4 pb-1 pb-sm-2 pb-md-4 py-lg-5 my-2 mt-lg-0">
-                <a class="btn btn-outline-primary" href="#">Read all articles</a>
-            </div>
-        </div>
-        <div style="height: 380px;"></div>
-    </section>
-
-
-    <!-- Contact form -->
-    <section class="container" style="margin-top: -380px;" data-bs-theme="dark">
-        <div class="card border-0 bg-primary position-relative py-lg-4 py-xl-5">
-
-            <!-- Decorative shapes -->
-            <svg class="position-absolute end-0 mt-n2" width="242" height="331" viewBox="0 0 242 331"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M172.014 250.127C137.236 227.74 112.349 192.144 144.586 153.591C157.686 137.932 176.759 127.973 196.524 122.046C234.647 110.639 277.027 113.361 313.349 129.576C338.19 140.666 361.129 159.183 369.934 184.502C383.476 223.496 359.75 260.161 321.569 273.118C288.832 284.223 247.685 279.513 214.885 269.837C201.003 265.743 185.745 258.966 172.014 250.127Z"
-                    fill="#121519" fill-opacity=".07"></path>
-                <path
-                    d="M20.3265 69.264C19.7064 43.0736 29.8071 17.1878 62.3851 19.8622C75.6229 20.9505 87.9525 27.2066 98.3563 35.3132C118.426 50.9253 132.424 73.896 136.952 98.6413C140.044 115.562 138.424 134.218 127.978 148C111.901 169.236 83.4531 170.283 62.5246 155.209C44.5807 142.281 32.0983 119.217 25.3391 98.6799C22.4836 89.9885 20.5616 79.6021 20.3265 69.264Z"
-                    fill="#121519" fill-opacity=".07"></path>
-            </svg>
-            <svg class="position-absolute start-0 bottom-0 ms-3" width="169" height="217" viewBox="0 0 169 217"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M34.2574 90.0177C29.666 97.6253 26.6254 106.591 24.9502 114.96C19.9522 140.043 26.4112 168.792 49.6162 181.885C66.0705 191.17 91.0017 189.904 108.062 183.692C125.725 177.266 135.045 168.04 142.29 150.389C151.409 128.174 150.912 99.6904 125.93 91.6429C115.423 88.254 104.723 86.5065 94.2249 82.5889C84.6622 79.0248 74.8545 72.1766 64.4411 71.6149C50.8011 70.8777 40.9122 79.0146 34.2574 90.0177Z"
-                    fill="#121519" fill-opacity="0.07"></path>
-                <path
-                    d="M147.005 75.6331C152.135 70.7783 156.106 64.2374 159.153 57.9073C166.014 43.6372 174.127 22.1368 160.207 9.68505C152.924 3.17188 139.243 3.86644 130.324 5.29774C118.428 7.20428 107.295 8.85077 96.5031 14.783C85.8056 20.6599 79.0155 33.6997 77.0014 45.6686C75.4978 54.5776 79.63 63.6672 84.7391 70.7453C91.8208 80.5571 103.503 84.2003 114.817 84.3975C121.101 84.5081 127.716 84.0527 133.89 82.8121C138.932 81.7962 143.273 79.1597 147.005 75.6331Z"
-                    fill="#121519" fill-opacity="0.07"></path>
-            </svg>
-            <div class="card-body position-relative z-2 py-5">
-                <form class="mx-auto" style="max-width: 800px;">
-                    <h2 class="h1 card-title text-center pb-4">Get a free consultation</h2>
-                    <div class="row g-4">
-                        <div class="col-sm-6">
-                            <label class="form-label fs-base" for="name">Name</label>
-                            <input class="form-control form-control-lg" type="text" placeholder="Your name" required
-                                id="name">
-                        </div>
-                        <div class="col-sm-6">
-                            <label class="form-label fs-base" for="company">Company</label>
-                            <input class="form-control form-control-lg" type="text" placeholder="Your company name"
-                                id="company">
-                        </div>
-                        <div class="col-sm-6">
-                            <label class="form-label fs-base" for="email">Email</label>
-                            <input class="form-control form-control-lg" type="email" placeholder="Email address"
-                                required id="email">
-                        </div>
-                        <div class="col-sm-6">
-                            <label class="form-label fs-base" for="phone">Phone</label>
-                            <input class="form-control form-control-lg" type="text" placeholder="Phone number"
-                                id="phone">
-                        </div>
-                        <div class="col-sm-12">
-                            <label class="form-label fs-base" for="message">How can we help?</label>
-                            <textarea class="form-control form-control-lg" rows="6" placeholder="Enter your message here..." required
-                                id="message"></textarea>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="seo">
-                                <label class="form-check-label fs-base" for="seo">SEO Website Audit</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="email-marketing" checked>
-                                <label class="form-check-label fs-base" for="email-marketing">Email Marketing</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="social">
-                                <label class="form-check-label fs-base" for="social">Social Networks</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="content-marketing">
-                                <label class="form-check-label fs-base" for="content-marketing">Content Marketing</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 text-center pt-4">
-                            <button class="btn btn-lg btn-light" type="submit">Send a request</button>
-                        </div>
-                    </div>
-                </form>
+                <a class="btn btn-outline-primary" href="#">Read More Blog Posts</a>
             </div>
         </div>
     </section>
+
 @endsection
