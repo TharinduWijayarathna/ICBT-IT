@@ -2,7 +2,7 @@
     <div class="container pt-md-2 pt-lg-3 pt-xl-4">
         <div class="row pb-5 pt-sm-2 mb-lg-2">
             <div class="col-md-12 col-lg-3 pb-2 pb-lg-0 mb-4 mb-lg-0">
-                <a class="navbar-brand py-0 mb-3 mb-lg-4" href="index.html">
+                <a class="navbar-brand py-0 mb-3 mb-lg-4" href="{{ route('home') }}">
                     <span class="text-primary flex-shrink-0 me-2">
                         <!-- Replace the SVG with your ICBT IT Society logo -->
                         <svg version="1.1" width="35" height="32" viewBox="0 0 36 33"
