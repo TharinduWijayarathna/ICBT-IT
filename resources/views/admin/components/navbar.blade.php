@@ -13,25 +13,25 @@
         <!-- Search -->
         <div class="navbar-nav align-items-center">
             <div class="nav-item navbar-search-wrapper mb-0">
-                
-                    @php
+
+                @php
+                    $bandwidth = 0;
+                    $isLoading = true;
+
+                    if (isset($navigatorConnection) && $navigatorConnection) {
+                        $bandwidth = $navigatorConnection['downlink'];
+                        $connectionType = $navigatorConnection['effectiveType'];
+                        $isLoading = false;
+                    } else {
+                        $connectionType = 'Unknown';
                         $bandwidth = 0;
-                        $isLoading = true;
-
-                        if (isset($navigatorConnection) && $navigatorConnection) {
-                            $bandwidth = $navigatorConnection['downlink'];
-                            $connectionType = $navigatorConnection['effectiveType'];
-                            $isLoading = false;
-                        } else {
-                            $connectionType = 'Unknown';
-                            $bandwidth = 0;
-                            $isLoading = false;
-                        }
-                    @endphp
+                        $isLoading = false;
+                    }
+                @endphp
 
 
-                    <div id="networkStatus"></div>
-       
+                <div id="networkStatus"></div>
+
             </div>
         </div>
         <!-- /Search -->
@@ -55,8 +55,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <span class="fw-medium d-block">John Doe</span>
-                                    <small class="text-muted">Admin</small>
+                                    <span class="fw-medium d-block">{{ auth()->user()->name }}</span>
+                                    <small class="text-muted">System Admin</small>
                                 </div>
                             </div>
                         </a>
@@ -64,21 +64,16 @@
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
-                    <li>
-                        <a class="dropdown-item" href="pages-profile-user.html">
-                            <i class="ti ti-user-check me-2 ti-sm"></i>
-                            <span class="align-middle">My Profile</span>
-                        </a>
-                    </li>
 
                     <li>
-                        <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
-                            <i class="ti ti-logout me-2 ti-sm"></i>
-                            <span class="align-middle">Log Out</span>
-                        </a>
+                        <form method="POST" action="{{ route('logout') }}" target="_blank">
+                            @csrf
+                            <button type="submit" class="dropdown-item">
+                                <i class="ti ti-logout me-2 ti-sm"></i>
+                                <span class="align-middle">Log Out</span>
+                            </button>
+                        </form>
+
                     </li>
                 </ul>
             </li>
