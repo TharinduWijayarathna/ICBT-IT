@@ -17,20 +17,20 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ftp.mypos.elementfx.com
-          username: tharindu@mypos.elementfx.com
-          password: Wikum@123
+          server: ftp.icbtits.com
+          username: user@icbtits.com
+          password: ICBTKandy@1234
           server-dir: /
 
       - name: 📝 Create .env file
         run: |
           echo "DB_CONNECTION=mysql" >> .env
-          echo "APP_NAME=Wikum" >> .env
+          echo "APP_NAME=ITS" >> .env
           echo "DB_HOST=127.0.0.1" >> .env
           echo "DB_PORT=3306" >> .env
-          echo "DB_DATABASE=cvtrbbjr_pos" >> .env
-          echo "DB_USERNAME=cvtrbbjr_pos" >> .env
-          echo "DB_PASSWORD=mypos@123" >> .env
+          echo "DB_DATABASE=aopjfvxq_it" >> .env
+          echo "DB_USERNAME=aopjfvxq_it" >> .env
+          echo "DB_PASSWORD=ICBTKandy@1234" >> .env
 
       - name: 🛠 Verify .env file
         run: cat .env
