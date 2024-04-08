@@ -21,10 +21,10 @@
                 @foreach ($members as $member)
                     <div class="col-md-3 col-12">
                         <div class="card-hover text-center">
-                            <div class="image-container">
-                                <img class="d-block rounded-5 mb-4"
+
+                                <img class="d-block rounded-5 mb-4 member-image"
                                     src="{{ asset('member_images/' . $member->image->name) }}" alt="Image">
-                            </div>
+
 
                             <h3 class="h5 mb-1">{{ $member->name ?? '' }}</h3>
                             <p class="text-body-secondary mb-2">{{ $member->designation }} (B{{ $member->batch }})</p>
@@ -38,26 +38,10 @@
 @endsection
 @push('styles')
     <style>
-        .image-container {
-            width: 200px;
-            /* Change this value to desired width */
+        .member-image {
+            width: 100%;
             height: 200px;
-            /* Change this value to desired height */
-            overflow: hidden;
-            position: relative;
-        }
-
-        .image-container img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            max-width: none;
-            max-height: none;
+            object-fit: cover;
         }
     </style>
 @endpush
