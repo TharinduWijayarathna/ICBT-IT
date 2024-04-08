@@ -6,7 +6,7 @@
 
             <div class="row">
                 @foreach ($events as $event)
-                    <article class="col-4 h-auto mb-3">
+                    <article class="col-12 col-md-4 h-auto mb-3">
                         <div class="card border-0 h-100">
                             <div class="card-body pb-4">
                                 <div class="d-flex align-items-center mb-4 mt-n1">
