@@ -41,19 +41,19 @@ jobs:
       # - name: 🚧 Remove composer.lock
       #   run: rm -rf composer.lock
 
-      - name: 🛠 Install PHP dependencies
-        run: composer install --no-dev --optimize-autoloader
+      # - name: 🛠 Install PHP dependencies
+      #   run: composer install --no-dev --optimize-autoloader
 
-      - name: 🔐 Generate App Key
-        run: php artisan key:generate
+      # - name: 🔐 Generate App Key
+      #   run: php artisan key:generate
 
-      - name: 🧹 Clear Cache and Config
-        run: |
-          php artisan config:clear
-          php artisan cache:clear
+      # - name: 🧹 Clear Cache and Config
+      #   run: |
+      #     php artisan config:clear
+      #     php artisan cache:clear
 
-      - name: 🏪 Link Storage
-        run: php artisan storage:link
+      # - name: 🏪 Link Storage
+      #   run: php artisan storage:link
 
       # - name: 🏪 Run Migrations
       #   run: |
@@ -69,8 +69,8 @@ jobs:
       # - name: 🚧 Install Vite dependencies
       #   run: npm install
 
-      - name: 🔐 Storage Permissions
-        run: chmod -R u=rwX,go=rX ./
+      # - name: 🔐 Storage Permissions
+      #   run: chmod -R u=rwX,go=rX ./
 
-      - name: 🚧 Build assets with Vite
-        run: npm run build
+      # - name: 🚧 Build assets with Vite
+      #   run: npm run build
