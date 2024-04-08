@@ -19,7 +19,7 @@
             <div class="row">
 
                 @foreach ($members as $member)
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-3 col-12 mb-3">
                         <div class="card-hover text-center">
 
                                 <img class="d-block rounded-5 mb-4 member-image"
@@ -31,6 +31,7 @@
 
                         </div>
                     </div>
+
                 @endforeach
             </div>
         </div>
@@ -40,7 +41,7 @@
     <style>
         .member-image {
             width: 100%;
-            height: 200px;
+            height: 500px;
             object-fit: cover;
         }
     </style>

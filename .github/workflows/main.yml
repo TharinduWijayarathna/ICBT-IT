@@ -22,24 +22,24 @@ jobs:
           password: ICBTKandy@1234
           server-dir: /
 
-      - name: 📝 Create .env file
-        run: |
-          echo "DB_CONNECTION=mysql" >> .env
-          echo "APP_NAME=ITS" >> .env
-          echo "DB_HOST=127.0.0.1" >> .env
-          echo "DB_PORT=3306" >> .env
-          echo "DB_DATABASE=aopjfvxq_it" >> .env
-          echo "DB_USERNAME=aopjfvxq_it" >> .env
-          echo "DB_PASSWORD=ICBTKandy@1234" >> .env
+      # - name: 📝 Create .env file
+      #   run: |
+      #     echo "DB_CONNECTION=mysql" >> .env
+      #     echo "APP_NAME=ITS" >> .env
+      #     echo "DB_HOST=127.0.0.1" >> .env
+      #     echo "DB_PORT=3306" >> .env
+      #     echo "DB_DATABASE=aopjfvxq_it" >> .env
+      #     echo "DB_USERNAME=aopjfvxq_it" >> .env
+      #     echo "DB_PASSWORD=ICBTKandy@1234" >> .env
 
-      - name: 🛠 Verify .env file
-        run: cat .env
+      # - name: 🛠 Verify .env file
+      #   run: cat .env
 
       # - name: 🛠 Remove existing vendor folder
       #   run: rm -rf vendor
 
-      - name: 🚧 Remove composer.lock
-        run: rm -rf composer.lock
+      # - name: 🚧 Remove composer.lock
+      #   run: rm -rf composer.lock
 
       - name: 🛠 Install PHP dependencies
         run: composer install --no-dev --optimize-autoloader
@@ -63,11 +63,11 @@ jobs:
       # - name: 🏗 Remove existing Node Modules Folder
       #   run: rm -rf node_modules
 
-      - name: 🚧 Remove package-lock.json
-        run: rm -rf package-lock.json
+      # - name: 🚧 Remove package-lock.json
+      #   run: rm -rf package-lock.json
 
-      - name: 🚧 Install Vite dependencies
-        run: npm install
+      # - name: 🚧 Install Vite dependencies
+      #   run: npm install
 
       - name: 🔐 Storage Permissions
         run: chmod -R u=rwX,go=rX ./
