@@ -25,6 +25,12 @@ class UserSeeder extends Seeder
                 'email' => 'navod@gmail.com',
                 'password' => 'Navod@123',
                 'confirm_password' => 'Navod@123',
+            ],
+            [
+                'name' => 'ICBT IT Society',
+                'email' => 'icbtkits@gmail.com',
+                'password' => 'ICBTKandy@1234',
+                'confirm_password' => 'ICBTKandy@1234',
             ]
         ];
 
